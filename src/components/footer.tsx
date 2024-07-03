@@ -1,14 +1,19 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="w-full bg-black">
       <div className="container mx-auto py-20">
         <div className="flex items-center gap-3">
           <div>
-            <img
+            <Image
+              src={"/assets/images/general/capi-logo.svg"}
               className="scale-75"
-              src="/assets/images/general/capi-logo.svg"
-              alt=""
-            ></img>
+              alt="image"
+              width={300}
+              height={200}
+              layout="responsive"
+            ></Image>
           </div>
           <div className="text-gray-400 text-sm font-semibold uppercase">
             WE PRIORITIZE COLLABORATION <br />

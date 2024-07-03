@@ -41,13 +41,20 @@ export default function Header() {
         <div className="container mx-auto h-full">
           <div className="flex justify-between items-center h-full">
             <div>
-              <img className="scale-75" src="/assets/images/general/capi-logo.svg" alt=""></img>
+              <Image
+                src={"/assets/images/general/capi-logo.svg"}
+                className=""
+                alt="image"
+                width={200}
+                height={100}
+                layout="responsive"                
+              ></Image>
             </div>
             <div>
               <ul className="flex gap-2 border-[1px] border-white rounded-full py-1 px-1">
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
+                    <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           Home
@@ -59,7 +66,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
+                    <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           Services
@@ -71,7 +78,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
+                    <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           Works
@@ -83,7 +90,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden hover:overflow-visible duration-500">
+                    <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden hover:overflow-visible duration-500">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           About Us
@@ -100,7 +107,7 @@ export default function Header() {
                       <div className="absolute top-[120%] translate-x-[-50%] left-1/2 w-[1250px] h-auto rounded-3xl bg-white opacity-0 translate-y-4 group-hover/link:opacity-100 group-hover/link:translate-y-0 duration-500 after:absolute after:top-[-15px] after:left-0 after:w-full after:h-[25px]">
                         <div className="flex w-full h-full divide-x-[1px] divide-black rounded-3xl overflow-hidden">
                           <Link href="" legacyBehavior className="block">
-                            <div className="flex-1 py-14 px-10 text-center flex flex-col justify-center hover:bg-gray-100">
+                            <div className="cursor-pointer flex-1 py-14 px-10 text-center flex flex-col justify-center hover:bg-gray-100">
                               <div>
                                 <FontAwesomeIcon
                                   icon={faShapes}
@@ -158,7 +165,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
+                    <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           New
@@ -170,7 +177,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
+                    <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           FAQ
@@ -182,7 +189,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative block text-xs font-semibold rounded-full py-3 px-3 overflow-hidden hover:overflow-visible duration-500">
+                    <div className="cursor-pointer group/link relative block text-xs font-semibold rounded-full py-3 px-3 overflow-hidden hover:overflow-visible duration-500">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           Contacts
@@ -191,7 +198,7 @@ export default function Header() {
                       <div className="absolute top-0 left-0 w-0 h-full bg-white group-hover/link:w-full rounded-full duration-300"></div>
 
                       <div className="absolute top-[120%] left-0 translate-x-[-70%] w-[1100px] h-auto rounded-3xl cursor-default bg-gray-200 translate-y-4 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-y-0 duration-500 after:absolute after:top-[-15px] after:left-0 after:w-full after:h-[25px]">
-                        <div className="grid grid-cols-3 w-full h-full rounded-3xl overflow-hidden p-12 gap-8">
+                        <div className="grid grid-cols-3 w-full h-full rounded-3xl overflow-hidden py-12 px-10 gap-8">
                           <div className="col-span-1">
                             <h2 className="font-semibold text-xl mb-6">
                               Contact
@@ -246,7 +253,16 @@ export default function Header() {
                             </form>
                           </div>
 
-                          <div className="col-span-1">3</div>
+                          <div className="col-span-1">
+                            <iframe
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.815298713598!2d105.81853457596922!3d21.000039688763025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac8596e4358b%3A0x52f9cd6571043f34!2zMzUgUC4gVMO0IFbEqW5oIERp4buHbiwgS2jGsMahbmcgVHJ1bmcsIFRoYW5oIFh1w6JuLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1719992323199!5m2!1svi!2s"
+                              width="100%"
+                              height="100%"
+                              style={{ border: 0, borderRadius: 10 }}
+                              allowFullScreen
+                              loading="lazy"
+                            ></iframe>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -335,11 +351,14 @@ export default function Header() {
             <div className="space-y-20">
               <div className="flex flex-col flex-wrap justify-center items-center">
                 <div className="flex-1">
-                  <img
-                    src="/assets/images/general/capi-logo.svg"
+                  <Image
+                    src={"/assets/images/general/capi-logo.svg"}
                     className="scale-75"
-                    alt=""
-                  ></img>
+                    alt="image"
+                    width={300}
+                    height={200}
+                    layout="responsive"
+                  ></Image>
                 </div>
                 <div className="uppercase text-gray-300 text-sm text-center mt-5 font-semibold px-4">
                   WE OFFER A COMPREHENSIVE SUITE OF SERVICES TO CATER TO VARIOUS
