@@ -36,18 +36,18 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed w-full h-[100px]">
+    <header className="fixed top-0 left-0 w-full h-[100px] z-10 bg-black">
       <div className="relative h-full">
         <div className="container mx-auto h-full">
           <div className="flex justify-between items-center h-full">
             <div>
-              <img src="/assets/images/general/capi-logo.svg" alt=""></img>
+              <img className="scale-75" src="/assets/images/general/capi-logo.svg" alt=""></img>
             </div>
             <div>
               <ul className="flex gap-2 border-[1px] border-white rounded-full py-1 px-1">
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative text-sm font-semibold rounded-full py-3 px-4 overflow-hidden">
+                    <div className="group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           Home
@@ -59,7 +59,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative text-sm font-semibold rounded-full py-3 px-4 overflow-hidden">
+                    <div className="group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           Services
@@ -71,7 +71,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative text-sm font-semibold rounded-full py-3 px-4 overflow-hidden">
+                    <div className="group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           Works
@@ -83,7 +83,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative text-sm font-semibold rounded-full py-3 px-4 overflow-hidden hover:overflow-visible duration-500">
+                    <div className="group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden hover:overflow-visible duration-500">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           About Us
@@ -158,7 +158,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative text-sm font-semibold rounded-full py-3 px-4 overflow-hidden">
+                    <div className="group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           New
@@ -170,7 +170,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative text-sm font-semibold rounded-full py-3 px-4 overflow-hidden">
+                    <div className="group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           FAQ
@@ -182,7 +182,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link className="block" href="" legacyBehavior>
-                    <div className="group/link relative block text-sm font-semibold rounded-full py-3 px-3 overflow-hidden hover:overflow-visible duration-500">
+                    <div className="group/link relative block text-xs font-semibold rounded-full py-3 px-3 overflow-hidden hover:overflow-visible duration-500">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
                           Contacts
@@ -295,31 +295,19 @@ export default function Header() {
                 </div>
               </div>
               <div
-                className="flex items-center justify-center bg-[#efad00] w-[60px] h-[60px] rounded-full cursor-pointer"
+                className="group/sideBar flex items-center justify-center bg-[#efad00] w-[55px] h-[55px] rounded-full cursor-pointer"
                 onClick={handleSideBar}
               >
-                {/* <div className="grid grid-cols-3 gap-1 p-4">
-                  <div className="bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="bg-white w-[4px] h-[4px] rounded-full"></div>
-                </div> */}
-
-                <div className="relative w-1/2 h-1/2">
-                  <div className="absolute top-0 left-0 bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="absolute top-0 left-1/2 bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="absolute bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="absolute bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="absolute bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="absolute bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="absolute bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="absolute bg-white w-[4px] h-[4px] rounded-full"></div>
-                  <div className="absolute bg-white w-[4px] h-[4px] rounded-full"></div>
+                <div className="relative group/sideBar w-1/4 h-1/4 translate-x-[-10%] translate-y-[-10%]">
+                  <div className="absolute top-0 left-0 group-hover/sideBar:top-1/2 group-hover/sideBar:left-0 transition-all duration-700 ease-in-out bg-white w-[4px] h-[4px] rounded-full"></div>
+                  <div className="absolute top-0 left-1/2 group-hover/sideBar:top-0 group-hover/sideBar:left-0 transition-all duration-700 ease-in-out bg-white w-[4px] h-[4px] rounded-full"></div>
+                  <div className="absolute top-0 left-full group-hover/sideBar:top-0 group-hover/sideBar:left-1/2 transition-all duration-700 ease-in-out bg-white w-[4px] h-[4px] rounded-full"></div>
+                  <div className="absolute top-1/2 left-0 group-hover/sideBar:top-full group-hover/sideBar:left-0 transition-all duration-700 ease-in-out bg-white w-[4px] h-[4px] rounded-full"></div>
+                  <div className="absolute top-1/2 left-1/2 bg-white w-[4px] h-[4px] rounded-full"></div>
+                  <div className="absolute top-1/2 left-full group-hover/sideBar:top-0 group-hover/sideBar:left-full transition-all duration-700 ease-in-out bg-white w-[4px] h-[4px] rounded-full"></div>
+                  <div className="absolute top-full left-0 group-hover/sideBar:top-full group-hover/sideBar:left-1/2 transition-all duration-700 ease-in-out bg-white w-[4px] h-[4px] rounded-full"></div>
+                  <div className="absolute top-full left-1/2 group-hover/sideBar:top-full group-hover/sideBar:left-full transition-all duration-700 ease-in-out bg-white w-[4px] h-[4px] rounded-full"></div>
+                  <div className="absolute top-full left-full group-hover/sideBar:top-1/2 group-hover/sideBar:left-full transition-all duration-700 ease-in-out bg-white w-[4px] h-[4px] rounded-full"></div>
                 </div>
               </div>
             </div>
