@@ -31,13 +31,13 @@ export default function Footer() {
           </div>
 
           <div className="flex items-end gap-2">
-            <div className="uppercase w-fit font-medium cursor-pointer text-xs text-white py-1 px-2 rounded-full border-2 border-white hover:bg-white hover:text-black">
+            <div className="btn-secondary">
               behance
             </div>
-            <div className="uppercase w-fit font-medium cursor-pointer text-xs text-white py-1 px-2 rounded-full border-2 border-white hover:bg-white hover:text-black">
+            <div className="btn-secondary">
               dribble
             </div>
-            <div className="uppercase w-fit font-medium cursor-pointer text-xs text-white py-1 px-2 rounded-full border-2 border-white hover:bg-white hover:text-black">
+            <div className="btn-secondary">
               facebook
             </div>
           </div>

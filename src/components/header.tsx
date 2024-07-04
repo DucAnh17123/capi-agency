@@ -36,24 +36,26 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 w-full h-[100px] z-10 bg-black">
+    <header className="fixed top-0 left-0 w-full header-height z-[100] bg-black">
       <div className="relative h-full">
         <div className="container mx-auto h-full">
           <div className="flex justify-between items-center h-full">
-            <div>
-              <Image
-                src={"/assets/images/general/capi-logo.svg"}
-                className=""
-                alt="image"
-                width={200}
-                height={100}
-                layout="responsive"                
-              ></Image>
+            <div className="w-[134px]">
+              <Link href="/">
+                <Image
+                  src={"/assets/images/general/capi-logo.svg"}
+                  className=""
+                  alt="image"
+                  width={80}
+                  height={50}
+                  layout="responsive"
+                ></Image>
+              </Link>
             </div>
             <div>
               <ul className="flex gap-2 border-[1px] border-white rounded-full py-1 px-1">
                 <li>
-                  <Link className="block" href="" legacyBehavior>
+                  <Link className="block" href="/" legacyBehavior>
                     <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
@@ -65,7 +67,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="block" href="" legacyBehavior>
+                  <Link className="block" href="/services" legacyBehavior>
                     <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
@@ -104,7 +106,7 @@ export default function Header() {
                       </div>
                       <div className="absolute top-0 left-0 w-0 h-full bg-white group-hover/link:w-full rounded-full duration-300"></div>
 
-                      <div className="absolute top-[120%] translate-x-[-50%] left-1/2 w-[1250px] h-auto rounded-3xl bg-white opacity-0 translate-y-4 group-hover/link:opacity-100 group-hover/link:translate-y-0 duration-500 after:absolute after:top-[-15px] after:left-0 after:w-full after:h-[25px]">
+                      <div className="absolute top-[130%] translate-x-[-50%] left-1/2 w-[1250px] h-auto rounded-3xl bg-white opacity-0 translate-y-4 group-hover/link:opacity-100 group-hover/link:translate-y-0 duration-500 after:absolute after:top-[-15px] after:left-0 after:w-full after:h-[25px]">
                         <div className="flex w-full h-full divide-x-[1px] divide-black rounded-3xl overflow-hidden">
                           <Link href="" legacyBehavior className="block">
                             <div className="cursor-pointer flex-1 py-14 px-10 text-center flex flex-col justify-center hover:bg-gray-100">
@@ -197,7 +199,7 @@ export default function Header() {
                       </div>
                       <div className="absolute top-0 left-0 w-0 h-full bg-white group-hover/link:w-full rounded-full duration-300"></div>
 
-                      <div className="absolute top-[120%] left-0 translate-x-[-70%] w-[1100px] h-auto rounded-3xl cursor-default bg-gray-200 translate-y-4 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-y-0 duration-500 after:absolute after:top-[-15px] after:left-0 after:w-full after:h-[25px]">
+                      <div className="absolute top-[130%] left-0 translate-x-[-70%] w-[1100px] h-auto rounded-3xl cursor-default bg-gray-200 translate-y-4 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-y-0 duration-500 after:absolute after:top-[-15px] after:left-0 after:w-full after:h-[25px]">
                         <div className="grid grid-cols-3 w-full h-full rounded-3xl overflow-hidden py-12 px-10 gap-8">
                           <div className="col-span-1">
                             <h2 className="font-semibold text-xl mb-6">

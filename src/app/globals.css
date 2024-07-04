@@ -3,11 +3,36 @@
 @tailwind utilities;
 
 :root {
-
 }
-
 
 body {
-
 }
 
+.header-height {
+  @apply h-[100px];
+}
+
+.mt-header-height {
+    @apply mt-[100px];
+  }
+
+
+/* Begin: background */
+.bg-primary { 
+  @apply bg-yellow-500;
+}
+/* End: background */
+
+
+
+
+/* Begin: btn */
+.btn-secondary {
+  @apply uppercase w-fit font-medium cursor-pointer text-xs text-white py-1 px-2 rounded-full border-2 border-white hover:bg-white hover:text-black;
+}
+
+.btn-primary {
+  @apply border-[1px] border-black rounded-full text-sm font-semibold py-4 px-5 uppercase hover:bg-black hover:text-white transition-all duration-500;
+}
+
+/* End: btn */

@@ -17,7 +17,7 @@ export default function News() {
           Our Latest News
           </div>
         </div>
-        <button className="group/btn mt-10 border-[1px] border-black rounded-full text-sm font-semibold py-3 px-4 uppercase flex items-center gap-3 hover:bg-black hover:text-white transition-all duration-500">
+        <button className="group/btn btn-primary mt-10 flex items-center gap-3">
           View all news
           <div className="group-hover/btn:scale-125 group-hover/btn:bg-white w-2 h-2 rounded-full bg-black transition-all duration-700"></div>
         </button>
