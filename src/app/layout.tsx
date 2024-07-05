@@ -25,9 +25,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        {children}
+        <div className="mt-header-height">{children}</div>
         <Footer />
-        </body>
+      </body>
     </html>
   );
 }

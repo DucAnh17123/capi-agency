@@ -17,8 +17,8 @@ export default function Process({ title, subTitle, btnText } : {title:string, su
       </div>
       <div className="flex items-center justify-between">
         <div>
-          <div className="text-sm text-gray-400 uppercase my-2">{subTitle}</div>
-          <div className="text-5xl font-semibold uppercase mt-4">{title}</div>
+          <div className="text-sm text-gray-400 font-semibold uppercase my-2">{subTitle}</div>
+          <div className="text-7xl font-bold mt-4">{title}</div>
         </div>
         <button className="group/btn btn-primary flex items-center gap-3">
           {btnText}

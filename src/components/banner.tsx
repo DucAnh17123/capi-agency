@@ -1,10 +1,10 @@
 export default function Banner() {
   return (
     <div className="h-auto w-full">
-      <div className="relative w-full pt-[50%] h-auto bg-[url('/assets/images/general/banner-home.jpg')] bg-auto bg-no-repeat bg-center">
-        <div className="absolute top-1/3 left-0 w-full h-auto text-white text-center">
+      <div className="relative w-full pt-[45%] h-auto bg-[url('/assets/images/general/banner-home.jpg')] bg-auto bg-no-repeat bg-center">
+        <div className="absolute top-1/4 left-0 w-full h-auto text-white text-center z-10">
           <div className="text-2xl font-bold">Chào mừng tới</div>
-          <div className="text-[9rem] leading-[10rem] font-bold uppercase">
+          <div className="text-[9rem] leading-[10rem] font-bold uppercase opacity-0 animate-fadeIn">
             Ux universe
           </div>
           <div className="text-lg font-semibold">
@@ -12,7 +12,7 @@ export default function Banner() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 pb-14 container mx-auto">
+        <div className="absolute bottom-0 left-0 right-0 pb-14 container mx-auto z-20">
             <div className="flex justify-between h-full">
               <div>
                 <div className="grid grid-cols-4 gap-5 text-white text-sm font-semibold">

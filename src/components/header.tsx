@@ -79,7 +79,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="block" href="" legacyBehavior>
+                  <Link className="block" href="/works" legacyBehavior>
                     <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
@@ -108,7 +108,7 @@ export default function Header() {
 
                       <div className="absolute top-[130%] translate-x-[-50%] left-1/2 w-[1250px] h-auto rounded-3xl bg-white opacity-0 translate-y-4 group-hover/link:opacity-100 group-hover/link:translate-y-0 duration-500 after:absolute after:top-[-15px] after:left-0 after:w-full after:h-[25px]">
                         <div className="flex w-full h-full divide-x-[1px] divide-black rounded-3xl overflow-hidden">
-                          <Link href="" legacyBehavior className="block">
+                          <Link href="/our-history" legacyBehavior className="block">
                             <div className="cursor-pointer flex-1 py-14 px-10 text-center flex flex-col justify-center hover:bg-gray-100">
                               <div>
                                 <FontAwesomeIcon
@@ -125,7 +125,7 @@ export default function Header() {
                             </div>
                           </Link>
 
-                          <Link href="" legacyBehavior className="block">
+                          <Link href="our-mission" legacyBehavior className="block">
                             <div className="flex-1 py-14 px-10 text-center flex flex-col justify-center hover:bg-gray-100">
                               <div>
                                 <FontAwesomeIcon
@@ -143,7 +143,7 @@ export default function Header() {
                             </div>
                           </Link>
 
-                          <Link href="" legacyBehavior className="block">
+                          <Link href="/our-team" legacyBehavior className="block">
                             <div className="flex-1 py-14 px-10 text-center flex flex-col justify-center hover:bg-gray-100">
                               <div>
                                 <FontAwesomeIcon
