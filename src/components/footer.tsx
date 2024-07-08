@@ -4,11 +4,18 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="relative w-full min-h-[500px] bg-black overflow-hidden select-none">
-      <div className="absolute top-0 bottom-[-20%] left-0 translate-y-[0] z-10">
+
+
+      
+      <div className="absolute top-0 bottom-[-20%] left-0 translate-y-[0] translate-x-[50%] z-10">
         <div className="text-white text-[35rem] font-bold text-nowrap leading-[40rem] inline-block animate-marquee">
         capi agency 
         </div>
       </div>
+
+
+
+
       <div className="absolute top-0 left-0 bottom-0 right-0 bg-black/85 z-20">
         <div className="container mx-auto py-20">
           <div className="flex items-center gap-3">

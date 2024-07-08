@@ -5,7 +5,7 @@ export default function NewsCard() {
   return (
     <Link href="" className="block bg-red-500 w-full h-500px">
       <div className="group/newsCard relative w-full pt-[100%] h-auto bg-[url('/assets/images/general/news-image.jpg')] bg-center bg-no-repeat bg-cover">
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-gray-100 w-full h-full z-10 group-hover/newsCard:bg-black/30 transition-colors duration-700 p-6">
+        <div className="absolute top-0 left-0 right-0 bottom-0 bg-gray-100 w-full h-full z-10 group-hover/newsCard:bg-black/30 transition-colors duration-700 p-8">
           <div className="relative w-full h-full overflow-hidden">
             <div className="absolute top-0 left-0 py-1 px-3 border-[1px] border-black rounded-full text-black text-xs font-semibold uppercase group-hover/newsCard:text-white group-hover/newsCard:border-white transition-colors duration-700">
               digital

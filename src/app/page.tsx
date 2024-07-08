@@ -2,11 +2,10 @@ import Image from "next/image";
 import Banner from "@/components/banner";
 import Process from "@/components/process";
 import UserSlider from "@/components/userSlider";
-import News from "@/components/news";
 import Services from "@/components/services";
 import ProductCard from "@/components/productCard";
 import ListPage from "@/components/pageList";
-
+import NewsCard from "@/components/newsCard";
 import Link from "next/link";
 
 import AnimatedCursor from "react-animated-cursor";
@@ -136,7 +135,35 @@ export default function Home() {
         btnText="tất cả quy trình"
       />
       <UserSlider />
-      <News />
+
+      {/* begin: news */}
+      <div className="my-20 container mx-auto ">
+        <div className="w-full h-[40px] relative">
+          <div className="absolute top-0 left-0 translate-x-[-50%] border-[20px] w-0 h-0 border-t-yellow-500 border-x-transparent border-b-transparent rotate-45"></div>
+        </div>
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="text-sm text-gray-400 uppercase my-2">
+              (HOW IT WORKINGS)
+            </div>
+            <div className="text-5xl font-semibold uppercase mt-4">
+              Our Latest News
+            </div>
+          </div>
+          <button className="group/btn btn-primary mt-10 flex items-center gap-3">
+            View all news
+            <div className="group-hover/btn:scale-125 group-hover/btn:bg-white w-2 h-2 rounded-full bg-black transition-all duration-700"></div>
+          </button>
+        </div>
+
+        <div className="mt-6 flex gap-6">
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+        </div>
+      </div>
+      {/* end: news */}
 
       {/* begin: next page */}
 

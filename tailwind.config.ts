@@ -25,7 +25,7 @@ const config: Config = {
         },
         marquee: {
           "100%": {
-            transform: "translate(-100%, 0)"
+            transform: "translate(-150%, 0)"
           },
         },
       },
