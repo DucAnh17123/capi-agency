@@ -11,7 +11,7 @@ import { Navigation, Mousewheel } from "swiper/modules";
 
 export default function UserSlider() {
   return (
-    <div className="relative w-full pt-[35%] h-auto bg-[url('/assets/images/general/banner-home-3.jpg')] bg-no-repeat bg-center bg-cover my-20">
+    <div className="relative w-full pt-[35%] h-auto bg-[url('/assets/images/general/banner-home-3.jpg')] bg-no-repeat bg-center bg-cover mb-20">
       <div className="absolute top-0 left-0 right-0 bottom-0">
         <div className="container mx-auto mt-[7rem]">
           <div className="text-gray-500 uppercase px-16 mb-4">

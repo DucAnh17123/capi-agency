@@ -1,7 +1,5 @@
-
 import Link from "next/link";
 import Image from "next/image";
-
 
 interface props {
   historyItems: any;
@@ -42,10 +40,12 @@ export default function historyCard({ historyItems }: any) {
                       </div>
                       <Link
                         href=""
-                        className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold"
+                        className="block"
                       >
-                        read more
-                        <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-125 duration-500"></div>
+                        <div className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold">
+                          <div>read more</div>
+                          <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-125 duration-500"></div>
+                        </div>
                       </Link>
                     </div>
                   </div>
@@ -66,10 +66,12 @@ export default function historyCard({ historyItems }: any) {
                       </div>
                       <Link
                         href=""
-                        className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold float-right"
+                        className="block"
                       >
-                        read more
-                        <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-125 duration-500"></div>
+                        <div className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold">
+                          <div>read more</div>
+                          <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-125 duration-500"></div>
+                        </div>
                       </Link>
                     </div>
                   </div>

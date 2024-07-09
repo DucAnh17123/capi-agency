@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import PageTitle from "@/components/pageTitle";
-import UserList from "@/components/userList";
+import UserCard from "@/components/userCard";
 import PageList from "@/components/pageList";
 
 export default function OurMission() {
@@ -36,14 +36,14 @@ export default function OurMission() {
         </div>
 
         <div className="grid grid-cols-4 gap-6 my-20">
-          <UserList />
-          <UserList />
-          <UserList />
-          <UserList />
-          <UserList />
-          <UserList />
-          <UserList />
-          <UserList />
+          <UserCard />
+          <UserCard />
+          <UserCard />
+          <UserCard />
+          <UserCard />
+          <UserCard />
+          <UserCard />
+          <UserCard />
         </div>
       </div>
 

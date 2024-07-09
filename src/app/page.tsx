@@ -133,6 +133,8 @@ export default function Home() {
         title="QUY TRÌNH TRIỂN KHAI"
         subTitle="(TỐC ĐỘ VÀ CHẤT LƯỢNG VƯỢT TRỘI)"
         btnText="tất cả quy trình"
+        backgroundColor="#fff"
+        textColor="#000"
       />
       <UserSlider />
 

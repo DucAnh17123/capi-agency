@@ -8,19 +8,19 @@ export default function ProductCard() {
           <div className="absolute top-0 left-0 bottom-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent group-hover/image:opacity-100 opacity-0 transition-all ease-in duration-[400ms]"></div>
         </div>
       </Link>
-      
+
       <div className="font-semibold py-6 space-y-1">
         <div className="flex gap-1 text-gray-500 text-sm uppercase">
           <Link href="" className="hover:text-yellow-500">
-            mobile app
+            <div>mobile app</div>
           </Link>
           <div>-</div>
           <Link href="" className="hover:text-yellow-500">
-            web app
+            <div>web app</div>
           </Link>
           <div>-</div>
           <Link href="" className="hover:text-yellow-500">
-            website
+            <div>website</div>
           </Link>
         </div>
         <Link href="">

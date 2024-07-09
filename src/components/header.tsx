@@ -41,19 +41,20 @@ export default function Header() {
           <div className="flex justify-between items-center h-full">
             <div className="w-[134px]">
               <Link href="/">
-                <Image
-                  src={"/assets/images/general/capi-logo.svg"}
-                  className=""
-                  alt="image"
-                  width={80}
-                  height={50}
-                  layout="responsive"
-                ></Image>
+                <div>
+                  <Image
+                    src={"/assets/images/general/capi-logo.svg"}
+                    className=""
+                    alt="image"
+                    width={80}
+                    height={50}
+                    layout="responsive"
+                  ></Image>
+                </div>
               </Link>
             </div>
             <div>
               <ul className="relative flex gap-2 border-[1px] border-white rounded-full py-1 px-1">
-                
                 <li>
                   <Link className="block" href="/" legacyBehavior>
                     <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
@@ -221,18 +222,18 @@ export default function Header() {
                             <div className="space-y-3 *:text-md *:font-medium">
                               <div className="hover:underline hover:underline-offset-4">
                                 <Link href="" legacyBehavior>
-                                  +84 392 293 045
+                                  <div>+84 392 293 045</div>
                                 </Link>
                               </div>
                               <div className="hover:underline hover:underline-offset-4">
                                 <Link href="" legacyBehavior>
-                                  35 To Vinh Dien str, Thanh Xuan, Hanoi,
-                                  Vietnam
+                                  <div>35 To Vinh Dien str, Thanh Xuan, Hanoi,
+                                  Vietnam</div>
                                 </Link>
                               </div>
                               <div className="hover:underline hover:underline-offset-4">
                                 <Link href="" legacyBehavior>
-                                  agency@capi.design
+                                  <div>agency@capi.design</div>
                                 </Link>
                               </div>
                             </div>
@@ -286,7 +287,13 @@ export default function Header() {
               </ul>
             </div>
             <div className="flex gap-6 items-center">
-              <div className={searchModal ? "relative w-6 overflow-visible" : "relative w-6 overflow-hidden"}>
+              <div
+                className={
+                  searchModal
+                    ? "relative w-6 overflow-visible"
+                    : "relative w-6 overflow-hidden"
+                }
+              >
                 {searchModal === false && (
                   <div onClick={handleSearchModal}>
                     <FontAwesomeIcon

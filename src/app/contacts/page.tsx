@@ -47,11 +47,10 @@ export default function Contacts() {
       </div>
 
       <div className="flex justify-center items-center py-20">
-        <Link
-          href=""
-          className="text-[7rem] leading-[7.5rem] text-gray-400 hover:text-[#efad00] font-semibold uppercase transition-colors duration-500"
-        >
-          capiagency
+        <Link href="">
+          <div className="text-[7rem] leading-[7.5rem] text-gray-400 hover:text-[#efad00] font-semibold uppercase transition-colors duration-500">
+            capiagency
+          </div>
         </Link>
       </div>
 

@@ -72,51 +72,68 @@ export default function Service() {
 
           <div className="col-span-2">
             <div className="flex flex-row flex-wrap justify-between items-stretch h-full">
-              <Link href="" className="basis-1/2 flex gap-6 px-8 py-4">
-                <div>
-                  <FontAwesomeIcon icon={faShapes} className="text-5xl" />
-                </div>
-                <div className="space-y-3">
-                  <div className="text-3xl font-semibold ">Quality Content</div>
-                  <div className="text-gray-500 font-medium">
-                    Content Strategy, Graphic Design, marketing Design
-                    Collateral, Packaging, Print Design, Illustration
+              <Link href="" className="basis-1/2">
+                <div className="flex gap-6 px-8 py-4">
+                  <div>
+                    <FontAwesomeIcon icon={faShapes} className="text-5xl" />
+                  </div>
+                  <div className="space-y-3">
+                    <div className="text-3xl font-semibold ">
+                      Quality Content
+                    </div>
+                    <div className="text-gray-500 font-medium">
+                      Content Strategy, Graphic Design, marketing Design
+                      Collateral, Packaging, Print Design, Illustration
+                    </div>
                   </div>
                 </div>
               </Link>
 
-              <Link href="" className="basis-1/2 flex gap-6 px-8 py-4">
-                <div>
-                  <FontAwesomeIcon icon={faShapes} className="text-5xl" />
-                </div>
-                <div className="space-y-3">
-                  <div className="text-3xl font-semibold ">Mobile Solutions</div>
-                  <div className="text-gray-500 font-medium">
-                  Brand Identity, Brand Strategy, Logo Design, Messaging, Positioning, Art Direction, Brand Guidelines
+              <Link href="" className="basis-1/2">
+                <div className="flex gap-6 px-8 py-4">
+                  <div>
+                    <FontAwesomeIcon icon={faShapes} className="text-5xl" />
+                  </div>
+                  <div className="space-y-3">
+                    <div className="text-3xl font-semibold ">
+                      Mobile Solutions
+                    </div>
+                    <div className="text-gray-500 font-medium">
+                      Brand Identity, Brand Strategy, Logo Design, Messaging,
+                      Positioning, Art Direction, Brand Guidelines
+                    </div>
                   </div>
                 </div>
               </Link>
 
-              <Link href="" className="basis-1/2 flex gap-6 px-8 py-4">
-                <div>
-                  <FontAwesomeIcon icon={faShapes} className="text-5xl" />
-                </div>
-                <div className="space-y-3">
-                  <div className="text-3xl font-semibold ">Web Solution</div>
-                  <div className="text-gray-500 font-medium">
-                  Web Design, Web Development, UI/UX, Wireframes, Copywriting, E-Commerce, SEO, CMS, Analytics/Tracking
+              <Link href="" className="basis-1/2">
+                <div className="flex gap-6 px-8 py-4">
+                  <div>
+                    <FontAwesomeIcon icon={faShapes} className="text-5xl" />
+                  </div>
+                  <div className="space-y-3">
+                    <div className="text-3xl font-semibold ">Web Solution</div>
+                    <div className="text-gray-500 font-medium">
+                      Web Design, Web Development, UI/UX, Wireframes,
+                      Copywriting, E-Commerce, SEO, CMS, Analytics/Tracking
+                    </div>
                   </div>
                 </div>
               </Link>
 
-              <Link href="" className="basis-1/2 flex gap-6 px-8 py-4">
-                <div>
-                  <FontAwesomeIcon icon={faShapes} className="text-5xl" />
-                </div>
-                <div className="space-y-3">
-                  <div className="text-3xl font-semibold ">Custom Strategy</div>
-                  <div className="text-gray-500 font-medium">
-                  Web Design, Web Development, UI/UX, Wireframes, Copywriting, E-Commerce, SEO, CMS, Analytics/Tracking
+              <Link href="" className="basis-1/2">
+                <div className="flex gap-6 px-8 py-4">
+                  <div>
+                    <FontAwesomeIcon icon={faShapes} className="text-5xl" />
+                  </div>
+                  <div className="space-y-3">
+                    <div className="text-3xl font-semibold ">
+                      Custom Strategy
+                    </div>
+                    <div className="text-gray-500 font-medium">
+                      Web Design, Web Development, UI/UX, Wireframes,
+                      Copywriting, E-Commerce, SEO, CMS, Analytics/Tracking
+                    </div>
                   </div>
                 </div>
               </Link>

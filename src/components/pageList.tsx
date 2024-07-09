@@ -1,6 +1,4 @@
-
 import Link from "next/link";
-
 
 export default function ListPage() {
   return (
@@ -14,7 +12,7 @@ export default function ListPage() {
             href=""
             className="absolute h-full right-0 top-0 left-0 z-[1] bg-white text-8xl translate-y-0 group-hover/page:translate-y-[-50%] transition-transform duration-500 font-semibold uppercase py-3 border-t-[1px] border-black px-[3rem] mx-[-3rem]"
           >
-            Cases
+            <div>Cases</div>
           </Link>
         </div>
         <div className="group/page relative w-full min-h-[100px] mt-6">
@@ -22,7 +20,7 @@ export default function ListPage() {
             href=""
             className="absolute h-full right-0 top-0 left-0 z-[2] bg-white text-8xl translate-y-0 group-hover/page:translate-y-[-50%] transition-transform duration-500 font-semibold uppercase py-3 border-t-[1px] border-black px-[3rem] mx-[-3rem]"
           >
-            Contacts
+            <div>Contacts</div>
           </Link>
         </div>
         <div className="group/page relative w-full min-h-[100px] mt-6">
@@ -30,7 +28,7 @@ export default function ListPage() {
             href=""
             className="absolute h-full right-0 top-0 left-0 z-[3] bg-white text-8xl translate-y-0 group-hover/page:translate-y-[-50%] transition-transform duration-500 font-semibold uppercase py-3 border-t-[1px] border-black px-[3rem] mx-[-3rem]"
           >
-            News
+            <div>News</div>
           </Link>
         </div>
       </div>
