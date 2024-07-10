@@ -192,7 +192,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="block" href="/faq" legacyBehavior>
+                  <Link className="block" href="/faq">
                     <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">

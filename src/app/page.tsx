@@ -8,8 +8,6 @@ import ListPage from "@/components/pageList";
 import NewsCard from "@/components/newsCard";
 import Link from "next/link";
 
-import AnimatedCursor from "react-animated-cursor";
-
 export default function Home() {
   const serviceItems = [
     {
@@ -64,57 +62,22 @@ export default function Home() {
       </div>
       {/* end: about capi agency */}
 
+
       {/* begin: product list */}
-
-      {/* <div>
-        <AnimatedCursor
-            innerSize={20}
-            outerSize={8}
-            color="0, 0, 0"
-            outerAlpha={0.3}
-            innerScale={0.7}
-            outerScale={12}
-            clickables={[
-              "a",
-              'input[type="text"]',
-              'input[type="email"]',
-              'input[type="number"]',
-              'input[type="submit"]',
-              'input[type="image"]',
-              "label[for]",
-              "select",
-              "textarea",
-              "button",
-              ".link",
-              {
-                target: ".custom",
-                // options: {
-                //   innerSize: 12,
-                //   outerSize: 12,
-                //   color: "255, 255, 255",
-                //   outerAlpha: 0.3,
-                //   innerScale: 0.7,
-                //   outerScale: 5,
-                // },
-              },
-            ]}
-          />
-      </div> */}
-
       <div className="flex justify-between gap-4 mt-[9.5rem] px-4">
-        <div className="flex-1 hover:flex-[3] transition-all duration-[400ms] ease-in">
+        <div className="flex-1 hover:flex-[3] transition-all duration-300 ease-in">
           <ProductCard />
         </div>
 
-        <div className="flex-1 hover:flex-[3] transition-all duration-[400ms] ease-in">
+        <div className="flex-1 hover:flex-[3] transition-all duration-300 ease-in">
           <ProductCard />
         </div>
 
-        <div className="flex-1 hover:flex-[3] transition-all duration-[400ms] ease-in">
+        <div className="flex-1 hover:flex-[3] transition-all duration-300 ease-in">
           <ProductCard />
         </div>
 
-        <div className="flex-1 hover:flex-[3] transition-all duration-[400ms] ease-in">
+        <div className="flex-1 hover:flex-[3] transition-all duration-300 ease-in">
           <ProductCard />
         </div>
       </div>

@@ -25,13 +25,23 @@ const config: Config = {
         },
         marquee: {
           "100%": {
-            transform: "translate(-150%, 0)"
+            transform: "translate(-150%, 0)",
           },
+        },
+        scaleGrow: {
+          "0%": { transform: "translateX(-100%)", paddingLeft: "0" },
+          "100%": { transform: "translateX(0%)", paddingLeft: "10px" },
+        },
+        paddingLeft: {
+          "0%": { paddingLeft: "0" },
+          "100%": { paddingLeft: "10px" },
         },
       },
       animation: {
         fadeIn: "fadeIn 2s ease-in-out forwards",
-        marquee: "marquee 60s linear infinite"
+        marquee: "marquee 60s linear infinite",
+        scaleGrow: "scaleGrow 0.9s ease-in-out",
+        paddingLeft: "paddingLeft 0.9s ease-in-out",
       },
     },
   },

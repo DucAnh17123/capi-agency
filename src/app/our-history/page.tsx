@@ -5,6 +5,8 @@ import Link from "next/link";
 import PageTitle from "@/components/pageTitle";
 import HistoryCard from "@/components/historyList";
 
+
+
 export default function OurHistory() {
   const historyItems = [
     {

@@ -1,8 +1,13 @@
-
-
 import PageTitle from "@/components/pageTitle";
 import NewsCard from "@/components/newsCard";
 import SideBar from "@/components/sideBar";
+
+
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "News - Capi Agency",
+  description: "Welcome to Capi Agency",
+};
 
 export default function News() {
   return (

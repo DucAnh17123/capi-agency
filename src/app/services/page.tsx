@@ -8,7 +8,8 @@ import PageTitle from "@/components/pageTitle";
 import Process from "@/components/process";
 import Services from "@/components/services";
 
-// import News from "../src//components/news";
+
+
 
 export default function Service() {
   const serviceItems = [
@@ -47,6 +48,8 @@ export default function Service() {
         title="Our Capabilities"
         subTitle="(how it workings)"
         btnText="View all capabilities"
+        backgroundColor="#fff"
+        textColor="#000"
       />
 
       <Services

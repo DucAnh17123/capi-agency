@@ -490,11 +490,14 @@ export default function SideBar() {
                   className="text-lg text-gray-200 hover:text-white cursor-pointer"
                   icon={faShare}
                 />
-                <FontAwesomeIcon
-                  className="text-lg text-gray-200 hover:text-white cursor-pointer"
-                  icon={faXmark}
-                />
+                <label htmlFor="gallery" className="block h-fit">
+                  <FontAwesomeIcon
+                    className="text-xl text-gray-200 hover:text-white cursor-pointer"
+                    icon={faXmark}
+                  />
+                </label>
               </label>
+
               <label htmlFor="">
                 <div>
                   <Image

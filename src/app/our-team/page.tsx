@@ -4,6 +4,12 @@ import PageTitle from "@/components/pageTitle";
 import UserCard from "@/components/userCard";
 import PageList from "@/components/pageList";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Our Team - Capi Agency",
+  description: "Welcome to Capi Agency",
+};
+
 export default function OurMission() {
   return (
     <div>

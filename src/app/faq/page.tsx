@@ -5,12 +5,25 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import PageTitle from "@/components/pageTitle";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "FAQ - Capi Agency",
+  description: "Welcome to Capi Agency",
+};
+
 export default function Faq() {
   return (
     <div>
       <PageTitle title="faq" />
 
-      <div className="container mx-auto text-[26rem] leading-[32rem] font-semibold text-center mt-[-6rem]">
+      <div
+        className="container mx-auto bg-[url('/assets/images/general/faq-bg.jpg')] bg-cover bg-center bg-no-repeat text-[26rem] leading-[32rem] font-semibold text-center mt-[-6rem]"
+        style={{
+          backgroundAttachment: "fixed",
+          WebkitTextFillColor: "transparent",
+          WebkitBackgroundClip: "text",
+        }}
+      >
         (capi)
       </div>
 

@@ -7,6 +7,12 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import PageTitle from "@/components/pageTitle";
 import Process from "@/components/process";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Our Mission - Capi Agency",
+  description: "Welcome to Capi Agency",
+};
+
 export default function OurMission() {
   return (
     <div>
