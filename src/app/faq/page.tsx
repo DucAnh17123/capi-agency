@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Faq() {
   return (
     <div>
-      <PageTitle title="faq" />
+      <PageTitle title="faq" subTitle="faq"/>
 
       <div
         className="container mx-auto bg-[url('/assets/images/general/faq-bg.jpg')] bg-cover bg-center bg-no-repeat text-[26rem] leading-[32rem] font-semibold text-center mt-[-6rem]"

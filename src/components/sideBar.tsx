@@ -187,7 +187,7 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="" className="relative block w-full group/link">
+            <Link href="category/1" className="relative block w-full group/link">
               <div>
                 <FontAwesomeIcon
                   icon={faCaretRight}
@@ -341,30 +341,54 @@ export default function SideBar() {
             Popular Tags
           </div>
           <div className="flex flex-row flex-wrap gap-[6px]">
-            <button className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500">
-              branding
-            </button>
-            <button className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500">
-              design
-            </button>
-            <button className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500">
-              development
-            </button>
-            <button className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500">
-              digital
-            </button>
-            <button className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500">
-              innovation
-            </button>
-            <button className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500">
-              marketing
-            </button>
-            <button className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500">
-              mobile
-            </button>
-            <button className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500">
-              technology
-            </button>
+            <Link
+              href="tag/1"
+              className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
+            >
+              <div>branding</div>
+            </Link>
+            <Link
+              href=""
+              className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
+            >
+              <div>design</div>
+            </Link>
+            <Link
+              href=""
+              className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
+            >
+              <div>development</div>
+            </Link>
+            <Link
+              href=""
+              className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
+            >
+              <div>digital</div>
+            </Link>
+            <Link
+              href=""
+              className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
+            >
+              <div>innovation</div>
+            </Link>
+            <Link
+              href=""
+              className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
+            >
+              <div>marketing</div>
+            </Link>
+            <Link
+              href=""
+              className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
+            >
+              <div>mobile</div>
+            </Link>
+            <Link
+              href=""
+              className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
+            >
+              <div>technology</div>
+            </Link>
           </div>
         </div>
         {/* end: popular tags */}
@@ -479,20 +503,20 @@ export default function SideBar() {
                 className="absolute top-0 right-0 w-[200px] h-[100px] justify-between py-6 px-6 flex text-white"
               >
                 <FontAwesomeIcon
-                  className="text-lg text-gray-200 hover:text-white cursor-pointer"
+                  className="text-lg p-1 text-gray-200 hover:text-white cursor-pointer"
                   icon={faCropSimple}
                 />
                 <FontAwesomeIcon
-                  className="text-lg text-gray-200 hover:text-white cursor-pointer"
+                  className="text-lg p-1 text-gray-200 hover:text-white cursor-pointer"
                   icon={faMagnifyingGlassPlus}
                 />
                 <FontAwesomeIcon
-                  className="text-lg text-gray-200 hover:text-white cursor-pointer"
+                  className="text-lg p-1 text-gray-200 hover:text-white cursor-pointer"
                   icon={faShare}
                 />
                 <label htmlFor="gallery" className="block h-fit">
                   <FontAwesomeIcon
-                    className="text-xl text-gray-200 hover:text-white cursor-pointer"
+                    className="text-xl p-1 text-gray-200 hover:text-white cursor-pointer"
                     icon={faXmark}
                   />
                 </label>

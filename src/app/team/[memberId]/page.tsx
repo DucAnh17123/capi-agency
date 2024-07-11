@@ -22,7 +22,7 @@ export default function MemberDetail() {
 
   return (
     <div>
-      <PageTitle title="contacts" memberName="Anna-Marry Scott" />
+      <PageTitle title="team" memberName="Anna-Marry Scott" />
 
       <div className="container mx-auto flex justify-center my-20">
         <div className="basis-9/12">

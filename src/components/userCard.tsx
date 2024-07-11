@@ -11,9 +11,9 @@ import {
 export default function UserCard() {
   return (
     <div className="group/userCard">
-      <Link href="">
+      <Link href="/team/1" legacyBehavior>
         <div>
-          <div className="overflow-hidden">
+          <div className="overflow-hidden cursor-pointer">
             <Image
               src={"/assets/images/general/user-image.jpg"}
               alt="image"
@@ -31,10 +31,11 @@ export default function UserCard() {
             <div className="text-2xl font-bold mt-1 mb-3">Anna-Marry Scott</div>
             <div className="flex items-center gap-5">
               <Link
+                legacyBehavior
                 href=""
                 className="opacity-0 group-hover/userCard:opacity-100 duration-500"
               >
-                <div>
+                <div className="cursor-pointer">
                   <FontAwesomeIcon
                     className="text-sm text-gray-400 hover:text-gray-600"
                     icon={faXTwitter}
@@ -42,10 +43,11 @@ export default function UserCard() {
                 </div>
               </Link>
               <Link
+                legacyBehavior
                 href=""
                 className="opacity-0 group-hover/userCard:opacity-100 duration-500 delay-200"
               >
-                <div>
+                <div className="cursor-pointer">
                   <FontAwesomeIcon
                     className="text-sm text-gray-400 hover:text-gray-600 "
                     icon={faFacebookF}
@@ -53,10 +55,11 @@ export default function UserCard() {
                 </div>
               </Link>
               <Link
+                legacyBehavior
                 href=""
                 className="opacity-0 group-hover/userCard:opacity-100 duration-500 delay-[400ms]"
               >
-                <div>
+                <div className="cursor-pointer">
                   <FontAwesomeIcon
                     className="text-sm text-gray-400 hover:text-gray-600 "
                     icon={faLinkedinIn}
@@ -64,10 +67,11 @@ export default function UserCard() {
                 </div>
               </Link>
               <Link
+                legacyBehavior
                 href=""
                 className="opacity-0 group-hover/userCard:opacity-100 duration-500 delay-[600ms]"
               >
-                <div>
+                <div className="cursor-pointer">
                   <FontAwesomeIcon
                     className="text-sm text-gray-400 hover:text-gray-600 "
                     icon={faInstagram}

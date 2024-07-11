@@ -1,14 +1,13 @@
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShapes } from "@fortawesome/free-solid-svg-icons";
+
 
 import PageTitle from "@/components/pageTitle";
 import ProductCard from "@/components/productCard";
 
-export default function Works() {
+export default function OurPortfolio() {
   return (
     <div>
-      <PageTitle title="Capi agency portfolio" />
+      <PageTitle title="Capi agency portfolio" subTitle="Capi agency portfolio"/>
 
       <div className="container mx-auto">
         <div className="flex justify-around gap-20">

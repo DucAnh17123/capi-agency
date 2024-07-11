@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function News() {
   return (
     <div>
-      <PageTitle title="news" />
+      <PageTitle title="news" subTitle="news"/>
 
       <div className="container mx-auto my-20 flex flex-row justify-center">
         <div className="basis-9/12">

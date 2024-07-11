@@ -81,7 +81,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="block" href="/works" legacyBehavior>
+                  <Link className="block" href="/our-portfolio" legacyBehavior>
                     <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
@@ -213,7 +213,7 @@ export default function Header() {
                       </div>
                       <div className="absolute top-0 left-0 w-0 h-full bg-white group-hover/link:w-full rounded-full duration-300"></div>
 
-                      <div className="absolute top-[130%] left-0 translate-x-[-70%] w-[1100px] h-auto rounded-3xl cursor-default bg-gray-200 translate-y-4 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-y-0 duration-500 after:absolute after:top-[-15px] after:left-0 after:w-full after:h-[25px]">
+                      <div className="absolute top-[130%] left-0 translate-x-[-70%] w-[1100px] h-auto rounded-3xl cursor-default bg-[#e1e1e1] translate-y-4 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-y-0 duration-500 after:absolute after:top-[-15px] after:left-0 after:w-full after:h-[25px]">
                         <div className="grid grid-cols-3 w-full h-full rounded-3xl overflow-hidden py-12 px-10 gap-8">
                           <div className="col-span-1">
                             <h2 className="font-semibold text-xl mb-6">
@@ -251,16 +251,16 @@ export default function Header() {
                               <input
                                 type="text"
                                 placeholder="Your Name"
-                                className="bg-gray-200 w-full pr-4 py-2 border-b-[1px] border-gray-700 outline-none font-medium placeholder:text-black placeholder:font-medium focus:placeholder:text-transparent"
+                                className="bg-[#e1e1e1] w-full pr-4 py-2 border-b-[1px] border-gray-700 outline-none font-medium placeholder:text-black placeholder:font-medium focus:placeholder:text-transparent"
                               />
                               <input
                                 type="email"
                                 placeholder="Your Email"
-                                className="bg-gray-200 w-full pr-4 py-2 border-b-[1px] border-gray-700 outline-none font-medium placeholder:text-black placeholder:font-medium focus:placeholder:text-transparent"
+                                className="bg-[#e1e1e1] w-full pr-4 py-2 border-b-[1px] border-gray-700 outline-none font-medium placeholder:text-black placeholder:font-medium focus:placeholder:text-transparent"
                               />
                               <textarea
                                 placeholder="Tell us about your ideas"
-                                className="bg-gray-200 w-full h-pull pr-4 py-2 border-b-[1px] border-gray-700 outline-none font-medium placeholder:text-black placeholder:font-medium focus:placeholder:text-transparent"
+                                className="bg-[#e1e1e1] w-full h-pull pr-4 py-2 border-b-[1px] border-gray-700 outline-none font-medium placeholder:text-black placeholder:font-medium focus:placeholder:text-transparent"
                               ></textarea>
                               <button className="group/btnSend py-3 px-4 bg-black rounded-full text-white text-xs uppercase flex items-center gap-2 mt-10 hover:bg-[#e44f39] transition-colors duration-700 ease-in-out">
                                 send

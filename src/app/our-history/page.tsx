@@ -6,7 +6,6 @@ import PageTitle from "@/components/pageTitle";
 import HistoryCard from "@/components/historyList";
 
 
-
 export default function OurHistory() {
   const historyItems = [
     {
@@ -41,7 +40,7 @@ export default function OurHistory() {
 
   return (
     <div className="w-full">
-      <PageTitle title="History" />
+      <PageTitle title="History" subTitle="history" />
 
       <div className="container mx-auto">
         <div className="flex items-center justify-between">

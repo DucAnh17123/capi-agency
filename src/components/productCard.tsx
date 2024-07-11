@@ -17,7 +17,7 @@ export default function ProductCard() {
           <div className="w-full h-[600px] bg-[url('/assets/images/general/product-image.png')] bg-no-repeat bg-auto bg-center group-hover/image:scale-[1.1] transition-transform ease-linear duration-[400ms]"></div>
           <div className="absolute top-0 left-0 bottom-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent group-hover/image:opacity-100 opacity-0 transition-all ease-in duration-300"></div>
           <div
-            className="fixed group-hover:scale-100 z-10 scale-0 transition-transform duration-500 delay-100 text-white text-sm font-semibold uppercase bg-white/30 backdrop-blur-sm rounded-full w-[100px] h-[100px] flex justify-center items-center pointer-events-none translate-x-[-50%] translate-y-[-50%]"
+            className="fixed group-hover:scale-100 z-10 scale-0 transition-transform duration-300 text-white text-sm font-semibold uppercase bg-white/30 backdrop-blur-sm rounded-full w-[100px] h-[100px] flex justify-center items-center pointer-events-none translate-x-[-50%] translate-y-[-50%]"
             style={{ top: positionCursor.y, left: positionCursor.x }}
           >
             More
@@ -40,7 +40,7 @@ export default function ProductCard() {
           </Link>
         </div>
         <Link href="">
-          <div className="text-2xl font-bold">247 Express</div>
+          <div className="text-2xl font-bold mt-1">247 Express</div>
         </Link>
       </div>
     </div>

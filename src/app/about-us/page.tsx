@@ -38,7 +38,7 @@ export default function AboutUs() {
   ];
   return (
     <div>
-      <PageTitle title="about us" />
+      <PageTitle title="about us" subTitle="about us"/>
 
       <div className="container mx-auto">
         <div className="relative w-full pt-[40%] h-auto bg-[url('/assets/images/general/about-us-bg.jpg')] bg-center bg-cover bg-no-repeat">

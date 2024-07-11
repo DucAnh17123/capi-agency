@@ -1,10 +1,12 @@
+"use client"
+
 import PageTitle from "@/components/pageTitle";
 import UserCard from "@/components/userCard";
 
 export default function Team() {
   return (
     <div>
-      <PageTitle title="team" />
+      <PageTitle title="archive" subTitle="team"/>
 
       <div className="container mx-auto flex justify-center mb-[6rem]">
         <div className="basis-9/12">

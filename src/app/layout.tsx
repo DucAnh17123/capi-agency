@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   description: "Welcome to Capi Agency",
 };
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,6 +30,11 @@ export default function RootLayout({
         <Header />
         <div className="mt-header-height">{children}</div>
         <Footer />
+
+        <div className="fixed group bottom-[60px] right-[-20px] flex gap-2 text-yellow-500 uppercase cursor-pointer -rotate-90 font-semibold text-sm z-50 items-center">
+          back to top
+          <FontAwesomeIcon className="group-hover:translate-x-[5px] transition-transform duration-500 text-md" icon={faArrowRight} />
+        </div>
       </body>
     </html>
   );

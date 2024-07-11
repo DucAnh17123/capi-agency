@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function OurMission() {
   return (
     <div>
-      <PageTitle title="Our team" />
+      <PageTitle title="Our team" subTitle="our team"/>
 
       <div className="container mx-auto">
         <div className="flex justify-around gap-20">

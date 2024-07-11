@@ -16,7 +16,7 @@ export default function Contacts() {
 
   return (
     <div>
-      <PageTitle title="contacts" />
+      <PageTitle title="contacts" subTitle="contacts"/>
 
       <div className="container mx-auto flex justify-center">
         <div className="basis-9/12">

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Banner from "@/components/banner";
+import HomeBanner from "@/components/homeBanner";
 import Process from "@/components/process";
 import UserSlider from "@/components/userSlider";
 import Services from "@/components/services";
@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <>
-      <Banner />
+      <HomeBanner />
 
       {/* begin: about capi agency */}
       <div className="container mx-auto mt-[9.5rem]">

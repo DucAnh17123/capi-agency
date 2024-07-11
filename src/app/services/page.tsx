@@ -42,7 +42,7 @@ export default function Service() {
 
   return (
     <div className="w-full">
-      <PageTitle title="Services" />
+      <PageTitle title="Services" subTitle="services" />
 
       <Process
         title="Our Capabilities"
