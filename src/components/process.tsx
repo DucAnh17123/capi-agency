@@ -7,14 +7,14 @@ import "swiper/css/scrollbar";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Mousewheel } from "swiper/modules";
+import { Mousewheel, Pagination } from "swiper/modules";
 
 export default function Process({
   title,
   subTitle,
   btnText,
   backgroundColor,
-  textColor
+  textColor,
 }: {
   title: string;
   subTitle: string;
@@ -50,12 +50,16 @@ export default function Process({
             style={{ marginRight: "0" }}
             className="mySwiper cursor-ew-resize relative w-full h-full"
             mousewheel={true}
-            modules={[Mousewheel]}
+            modules={[Mousewheel, Pagination]}
+            pagination={{
+              type: "progressbar",
+            }}
             speed={600}
           >
+            {" "}
             <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
               <div>
-                <div className="py-8 border-b-[1px] border-gray-500 text-3xl font-semibold pr-[6rem] ">
+                <div className="py-8 text-3xl font-semibold pr-[6rem] ">
                   Access to latest technology
                 </div>
                 <div className="pr-[6rem] py-8 text-lg">
@@ -73,7 +77,7 @@ export default function Process({
             </SwiperSlide>
             <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
               <div>
-                <div className="py-8 border-b-[1px] border-gray-500 text-3xl font-semibold pr-[6rem]">
+                <div className="py-8 text-3xl font-semibold pr-[6rem]">
                   Access to latest technology
                 </div>
                 <div className="pr-[6rem] py-8 text-lg">
@@ -91,7 +95,7 @@ export default function Process({
             </SwiperSlide>
             <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
               <div>
-                <div className="py-8 border-b-[1px] border-gray-500 text-3xl font-semibold pr-[6rem]">
+                <div className="py-8 text-3xl font-semibold pr-[6rem]">
                   Access to latest technology
                 </div>
                 <div className="pr-[6rem] py-8 text-lg">
@@ -109,7 +113,7 @@ export default function Process({
             </SwiperSlide>
             <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
               <div>
-                <div className="py-8 border-b-[1px] border-gray-500 text-3xl font-semibold pr-[6rem]">
+                <div className="py-8 text-3xl font-semibold pr-[6rem]">
                   Access to latest technology
                 </div>
                 <div className="pr-[6rem] py-8 text-lg">
@@ -127,7 +131,7 @@ export default function Process({
             </SwiperSlide>
             <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
               <div>
-                <div className="py-8 border-b-[1px] border-gray-500 text-3xl font-semibold pr-[6rem]">
+                <div className="py-8 text-3xl font-semibold pr-[6rem]">
                   Access to latest technology
                 </div>
                 <div className="pr-[6rem] py-8 text-lg">
@@ -145,7 +149,7 @@ export default function Process({
             </SwiperSlide>
             <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
               <div>
-                <div className="py-8 border-b-[1px] border-gray-500 text-3xl font-semibold pr-[6rem]">
+                <div className="py-8 text-3xl font-semibold pr-[6rem]">
                   Access to latest technology
                 </div>
                 <div className="pr-[6rem] py-8 text-lg">
@@ -163,7 +167,7 @@ export default function Process({
             </SwiperSlide>
             <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
               <div>
-                <div className="py-8 border-b-[1px] border-gray-500 text-3xl font-semibold pr-[6rem]">
+                <div className="py-8 text-3xl font-semibold pr-[6rem]">
                   Access to latest technology
                 </div>
                 <div className="pr-[6rem] py-8 text-lg">
@@ -181,7 +185,7 @@ export default function Process({
             </SwiperSlide>
             <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
               <div>
-                <div className="py-8 border-b-[1px] border-gray-500 text-3xl font-semibold pr-[6rem]">
+                <div className="py-8 text-3xl font-semibold pr-[6rem]">
                   Access to latest technology
                 </div>
                 <div className="pr-[6rem] py-8 text-lg">
@@ -199,7 +203,7 @@ export default function Process({
             </SwiperSlide>
             <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
               <div>
-                <div className="py-8 border-b-[1px] border-gray-500 text-3xl font-semibold pr-[6rem]">
+                <div className="py-8 text-3xl font-semibold pr-[6rem]">
                   Access to latest technology
                 </div>
                 <div className="pr-[6rem] py-8 text-lg">

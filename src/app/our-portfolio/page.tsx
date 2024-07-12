@@ -36,12 +36,12 @@ export default function OurPortfolio() {
       </div>
 
       <div className="grid grid-cols-3 gap-6 mx-6">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductCard isFixHeight={false} />
+        <ProductCard isFixHeight={false} />
+        <ProductCard isFixHeight={false} />
+        <ProductCard isFixHeight={false} />
+        <ProductCard isFixHeight={false} />
+        <ProductCard isFixHeight={false} />
       </div>
 
       <div className="flex justify-center items-center pt-10 mb-20">

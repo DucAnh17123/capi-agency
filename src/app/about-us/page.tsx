@@ -124,7 +124,7 @@ export default function AboutUs() {
             <div className="text-6xl font-bold leading-[4.5rem]">
               Our Incredible Team
             </div>
-            <Link href="" className="block">
+            <Link href="/our-team" className="block">
               <div className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold mt-6">
                 View all team
                 <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-150 duration-500"></div>

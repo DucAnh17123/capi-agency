@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 import PageTitle from "@/components/pageTitle";
@@ -19,102 +18,12 @@ export default function PortfolioCategory() {
           </div>
 
           <div className="grid grid-cols-3 mt-14 gap-8">
-            <div>
-              <Link href="/portfolio/1" className="block">
-                <div className="bg-[url('/assets/images/general/portfolio-image.png')] bg-no-repeat bg-auto bg-center w-full pt-[100%]"></div>
-              </Link>
-
-              <div className="font-semibold py-4 space-y-1">
-                <div className="flex gap-1 text-gray-500 text-sm uppercase">
-                  <Link href="" className="hover:text-yellow-500">
-                    <div>mobile app</div>
-                  </Link>
-                </div>
-                <Link href="">
-                  <div className="text-2xl font-bold mt-1">247 Express</div>
-                </Link>
-              </div>
-            </div>
-            <div>
-              <Link href="/portfolio/1" className="block">
-                <div className="bg-[url('/assets/images/general/portfolio-image.png')] bg-no-repeat bg-auto bg-center w-full pt-[100%]"></div>
-              </Link>
-
-              <div className="font-semibold py-4 space-y-1">
-                <div className="flex gap-1 text-gray-500 text-sm uppercase">
-                  <Link href="" className="hover:text-yellow-500">
-                    <div>mobile app</div>
-                  </Link>
-                </div>
-                <Link href="">
-                  <div className="text-2xl font-bold mt-1">247 Express</div>
-                </Link>
-              </div>
-            </div>
-            <div>
-              <Link href="/portfolio/1" className="block">
-                <div className="bg-[url('/assets/images/general/portfolio-image.png')] bg-no-repeat bg-auto bg-center w-full pt-[100%]"></div>
-              </Link>
-
-              <div className="font-semibold py-4 space-y-1">
-                <div className="flex gap-1 text-gray-500 text-sm uppercase">
-                  <Link href="" className="hover:text-yellow-500">
-                    <div>mobile app</div>
-                  </Link>
-                </div>
-                <Link href="">
-                  <div className="text-2xl font-bold mt-1">247 Express</div>
-                </Link>
-              </div>
-            </div>
-            <div>
-              <Link href="/portfolio/1" className="block">
-                <div className="bg-[url('/assets/images/general/portfolio-image.png')] bg-no-repeat bg-auto bg-center w-full pt-[100%]"></div>
-              </Link>
-
-              <div className="font-semibold py-4 space-y-1">
-                <div className="flex gap-1 text-gray-500 text-sm uppercase">
-                  <Link href="" className="hover:text-yellow-500">
-                    <div>mobile app</div>
-                  </Link>
-                </div>
-                <Link href="">
-                  <div className="text-2xl font-bold mt-1">247 Express</div>
-                </Link>
-              </div>
-            </div>
-            <div>
-              <Link href="/portfolio/1" className="block">
-                <div className="bg-[url('/assets/images/general/portfolio-image.png')] bg-no-repeat bg-auto bg-center w-full pt-[100%]"></div>
-              </Link>
-
-              <div className="font-semibold py-4 space-y-1">
-                <div className="flex gap-1 text-gray-500 text-sm uppercase">
-                  <Link href="" className="hover:text-yellow-500">
-                    <div>mobile app</div>
-                  </Link>
-                </div>
-                <Link href="">
-                  <div className="text-2xl font-bold mt-1">247 Express</div>
-                </Link>
-              </div>
-            </div>
-            <div>
-              <Link href="/portfolio/1" className="block">
-                <div className="bg-[url('/assets/images/general/portfolio-image.png')] bg-no-repeat bg-auto bg-center w-full pt-[100%]"></div>
-              </Link>
-
-              <div className="font-semibold py-4 space-y-1">
-                <div className="flex gap-1 text-gray-500 text-sm uppercase">
-                  <Link href="" className="hover:text-yellow-500">
-                    <div>mobile app</div>
-                  </Link>
-                </div>
-                <Link href="">
-                  <div className="text-2xl font-bold mt-1">247 Express</div>
-                </Link>
-              </div>
-            </div>
+            <ProductCard isFixHeight={false} />
+            <ProductCard isFixHeight={false} />
+            <ProductCard isFixHeight={false} />
+            <ProductCard isFixHeight={false} />
+            <ProductCard isFixHeight={false} />
+            <ProductCard isFixHeight={false} />
           </div>
 
           <div className="w-full flex justify-center mt-10">

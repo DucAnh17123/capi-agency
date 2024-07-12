@@ -43,7 +43,7 @@ export default function SideBar() {
             Recent Posts
           </div>
           <div className="space-y-4">
-            <Link href="" className="block">
+            <Link href="/1" className="block">
               <div className="flex gap-3 items-start group/link">
                 <FontAwesomeIcon
                   icon={faFile}
@@ -54,7 +54,7 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="" className="block">
+            <Link href="/1" className="block">
               <div className="flex gap-3 items-start group/link">
                 <FontAwesomeIcon
                   icon={faFile}
@@ -65,7 +65,7 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="" className="block">
+            <Link href="/1" className="block">
               <div className="flex gap-3 items-start group/link">
                 <FontAwesomeIcon
                   icon={faFile}
@@ -76,7 +76,7 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="" className="block">
+            <Link href="/1" className="block">
               <div className="flex gap-3 items-start group/link">
                 <FontAwesomeIcon
                   icon={faFile}
@@ -87,7 +87,7 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="" className="block">
+            <Link href="/1" className="block">
               <div className="flex gap-3 items-start group/link">
                 <FontAwesomeIcon
                   icon={faFile}
@@ -105,7 +105,7 @@ export default function SideBar() {
         {/* begin:motto agency */}
         <div className="relative w-full pt-[130%] bg-[url('/assets/images/general/motto-agency.jpg')] bg-center bg-cover bg-no-repeat">
           <Link
-            href=""
+            href="/contacts"
             className="absolute top-0 left-0 right-0 bottom-0 group/motto"
           >
             <div className="flex flex-col items-center px-4 py-14 text-center justify-between h-full">
@@ -165,7 +165,7 @@ export default function SideBar() {
             Categories
           </div>
           <div className="space-y-1">
-            <Link href="" className="relative block w-full group/link">
+            <Link href="category/1" className="relative block w-full group/link">
               <div>
                 <FontAwesomeIcon
                   icon={faCaretRight}
@@ -176,7 +176,7 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="" className="relative block w-full group/link">
+            <Link href="category/1" className="relative block w-full group/link">
               <div>
                 <FontAwesomeIcon
                   icon={faCaretRight}
@@ -198,7 +198,7 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="" className="relative block w-full group/link">
+            <Link href="category/1" className="relative block w-full group/link">
               <div>
                 <FontAwesomeIcon
                   icon={faCaretRight}
@@ -209,7 +209,7 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="" className="relative block w-full group/link">
+            <Link href="category/1" className="relative block w-full group/link">
               <div>
                 <FontAwesomeIcon
                   icon={faCaretRight}
@@ -273,7 +273,7 @@ export default function SideBar() {
             Related Posts
           </div>
           <div className="space-y-7">
-            <Link href="" className="block">
+            <Link href="/1" className="block">
               <div className="grid grid-cols-3 gap-4">
                 <Image
                   className="col-span-1"
@@ -292,7 +292,7 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="" className="block">
+            <Link href="/1" className="block">
               <div className="grid grid-cols-3 gap-4">
                 <Image
                   className="col-span-1"
@@ -311,7 +311,7 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="" className="block">
+            <Link href="/1" className="block">
               <div className="grid grid-cols-3 gap-4">
                 <Image
                   className="col-span-1"
@@ -348,43 +348,43 @@ export default function SideBar() {
               <div>branding</div>
             </Link>
             <Link
-              href=""
+              href="tag/1"
               className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
             >
               <div>design</div>
             </Link>
             <Link
-              href=""
+              href="tag/1"
               className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
             >
               <div>development</div>
             </Link>
             <Link
-              href=""
+              href="tag/1"
               className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
             >
               <div>digital</div>
             </Link>
             <Link
-              href=""
+              href="tag/1"
               className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
             >
               <div>innovation</div>
             </Link>
             <Link
-              href=""
+              href="tag/1"
               className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
             >
               <div>marketing</div>
             </Link>
             <Link
-              href=""
+              href="tag/1"
               className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
             >
               <div>mobile</div>
             </Link>
             <Link
-              href=""
+              href="tag/1"
               className="w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white transition-colors duration-500"
             >
               <div>technology</div>

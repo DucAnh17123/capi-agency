@@ -62,25 +62,43 @@ export default function Home() {
       </div>
       {/* end: about capi agency */}
 
-
       {/* begin: product list */}
-      <div className="flex justify-between gap-4 mt-[9.5rem] px-4">
-        <div className="flex-1 hover:flex-[3] transition-all duration-300 ease-in">
-          <ProductCard />
+        {/* <div className="flex mt-[9.5rem] px-4 flex-wrap xl:flex-nowrap">
+          <div className="basis-full md:basis-1/2 xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+            <ProductCard isFixHeight={true} />
+          </div>
+
+          <div className="basis-full md:basis-1/2 xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+            <ProductCard isFixHeight={true} />
+          </div>
+
+          <div className="basis-full md:basis-1/2 xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+            <ProductCard isFixHeight={true} />
+          </div>
+
+          <div className="basis-full md:basis-1/2 xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+            <ProductCard isFixHeight={true} />
+          </div>
+        </div> */}
+        <div className="flex gap-4 mt-[9.5rem] px-4 flex-wrap xl:flex-nowrap">
+          <div className="basis-full xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+            <ProductCard isFixHeight={true} />
+          </div>
+
+          <div className="basis-full xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+            <ProductCard isFixHeight={true} />
+          </div>
+
+          <div className="basis-full xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+            <ProductCard isFixHeight={true} />
+          </div>
+
+          <div className="basis-full xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+            <ProductCard isFixHeight={true} />
+          </div>
         </div>
 
-        <div className="flex-1 hover:flex-[3] transition-all duration-300 ease-in">
-          <ProductCard />
-        </div>
 
-        <div className="flex-1 hover:flex-[3] transition-all duration-300 ease-in">
-          <ProductCard />
-        </div>
-
-        <div className="flex-1 hover:flex-[3] transition-all duration-300 ease-in">
-          <ProductCard />
-        </div>
-      </div>
 
       {/* begin: product list */}
 

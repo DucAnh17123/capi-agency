@@ -5,8 +5,6 @@ import { useState } from "react";
 
 import PageTitle from "@/components/pageTitle";
 
-
-
 export default function Contacts() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
@@ -16,7 +14,7 @@ export default function Contacts() {
 
   return (
     <div>
-      <PageTitle title="contacts" subTitle="contacts"/>
+      <PageTitle title="contacts" subTitle="contacts" />
 
       <div className="container mx-auto flex justify-center">
         <div className="basis-9/12">
@@ -59,17 +57,8 @@ export default function Contacts() {
 
       <div className="flex justify-center items-center py-20">
         <Link href="">
-          <div className="relative" onMouseMove={(e) => cursorHandle(e)}>
-            <div
-              
-              className="text-[7rem] leading-[7.5rem] text-gray-400 font-semibold uppercase transition-colors duration-500 overflow-hidden"
-            >
-              capiagency
-            </div>
-            <div className="fixed w-[100px] h-[100px] rounded-full bg-yellow-500 pointer-events-none translate-x-[-50%] translate-y-[-50%]"
-            style={{top: cursorPosition.y, left: cursorPosition.x}}>
-
-            </div>
+          <div className="text-[7rem] leading-[7.5rem] text-gray-400 font-semibold hover:text-yellow-500 uppercase transition-colors duration-500 overflow-hidden">
+            capi agency
           </div>
         </Link>
       </div>

@@ -26,12 +26,10 @@ export default function UserSlider() {
                 loop={true}
                 className="mySwiper relative w-full h-[400px]"
                 modules={[Navigation, Mousewheel]}
-                mousewheel={true}
                 speed={600}
-                // navigation={{
-                //   nextEl: ".swiper-button-next",
-                //   prevEl: ".swiper-button-prev",
-                // }}
+                navigation={{
+                 
+                }}
               >
                 <SwiperSlide className="absolute top-0 bottom-[50%] left-0 right-0 w-full">
                   <div>

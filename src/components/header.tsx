@@ -10,6 +10,7 @@ import {
   faShapes,
   faChevronDown,
   faXmark,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 const containerStyle = {
@@ -24,22 +25,36 @@ const center = {
 
 export default function Header() {
   const [searchModal, setSearchModal] = useState(false);
-  const [sideBar, setSideBar] = useState(false);
+  const [sideBarRight, setSideBarRight] = useState(false);
+  const [sideBarLeft, setSideBarLeft] = useState(false);
 
   function handleSearchModal() {
     setSearchModal(!searchModal);
   }
 
-  function handleSideBar() {
-    setSideBar(!sideBar);
+  function handleSideBarRight() {
+    setSideBarRight(!sideBarRight);
+  }
+  function handleSideBarLeft() {
+    setSideBarLeft(!sideBarLeft);
   }
 
   return (
-    <header className="fixed top-0 left-0 w-full header-height z-40 bg-black">
+    <header className="fixed top-0 left-0 w-full h-[60px] xl:h-[100px] z-40 bg-[#232323] xl:bg-black">
       <div className="relative h-full">
         <div className="container mx-auto h-full">
           <div className="flex justify-between items-center h-full">
-            <div className="w-[134px]">
+            <div
+              className="block xl:hidden cursor-pointer"
+              onClick={handleSideBarLeft}
+            >
+              <FontAwesomeIcon
+                className="text-white text-2xl xl:text-xl"
+                icon={faBars}
+              />
+            </div>
+
+            <div className="w-[134px] scale-75 xl:scale-100 origin-center">
               <Link href="/">
                 <div>
                   <Image
@@ -53,7 +68,8 @@ export default function Header() {
                 </div>
               </Link>
             </div>
-            <div>
+
+            <div className="hidden xl:block">
               <ul className="relative flex gap-2 border-[1px] border-white rounded-full py-1 px-1">
                 <li>
                   <Link className="block" href="/" legacyBehavior>
@@ -227,8 +243,10 @@ export default function Header() {
                               </div>
                               <div className="hover:underline hover:underline-offset-4">
                                 <Link href="" legacyBehavior>
-                                  <div>35 To Vinh Dien str, Thanh Xuan, Hanoi,
-                                  Vietnam</div>
+                                  <div>
+                                    35 To Vinh Dien str, Thanh Xuan, Hanoi,
+                                    Vietnam
+                                  </div>
                                 </Link>
                               </div>
                               <div className="hover:underline hover:underline-offset-4">
@@ -286,6 +304,7 @@ export default function Header() {
                 </li>
               </ul>
             </div>
+
             <div className="flex gap-6 items-center">
               <div
                 className={
@@ -298,7 +317,7 @@ export default function Header() {
                   <div onClick={handleSearchModal}>
                     <FontAwesomeIcon
                       icon={faMagnifyingGlass}
-                      className="text-white text-xl cursor-pointer"
+                      className={`text-white text-2xl xl:text-xl cursor-pointer`}
                     />
                   </div>
                 )}
@@ -332,9 +351,10 @@ export default function Header() {
                   </div>
                 </div>
               </div>
+
               <div
-                className="group/sideBar flex items-center justify-center bg-[#efad00] w-[55px] h-[55px] rounded-full cursor-pointer"
-                onClick={handleSideBar}
+                className="group/sideBar hidden xl:flex items-center justify-center bg-[#efad00] w-[55px] h-[55px] rounded-full cursor-pointer"
+                onClick={handleSideBarRight}
               >
                 <div className="relative group/sideBar w-1/4 h-1/4 translate-x-[-10%] translate-y-[-10%]">
                   <div className="absolute top-0 left-0 group-hover/sideBar:top-1/2 group-hover/sideBar:left-0 transition-all duration-700 ease-in-out bg-white w-[4px] h-[4px] rounded-full"></div>
@@ -352,10 +372,140 @@ export default function Header() {
           </div>
         </div>
 
-        {/* begin: sideBar */}
+        {/* begin: sideBar left */}
         <div
           className={
-            sideBar
+            sideBarLeft
+              ? "absolute top-0 left-0 min-h-screen w-[400px] bg-[#232323] px-8 py-12 opacity-100 translate-x-0 duration-700"
+              : "absolute top-0 left-0 min-h-screen w-[400px] bg-[#232323] px-8 py-12 opacity-0 translate-x-[-150%] duration-700"
+          }
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="relative w-full">
+            <div className="absolute top-0 right-[0] translate-x-[350%] translate-y-[-100%]">
+              <FontAwesomeIcon
+                icon={faXmark}
+                className="text-yellow-500 text-2xl cursor-pointer"
+                onClick={handleSideBarLeft}
+              />
+            </div>
+
+            <div className="space-y-10 text-white">
+              {/* Begin: sideBar search */}
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="outline-none w-full py-3 pl-8 text-smd text-white border-b-[1px] bg-[#232323] border-white/70 placeholder:text-white focus:placeholder:text-transparent"
+                />
+                <div className="absolute top-[50%] translate-y-[-50%]">
+                  <FontAwesomeIcon
+                    icon={faMagnifyingGlass}
+                    className="text-yellow-500 text-lg"
+                  />
+                </div>
+              </div>
+              {/* End: sideBar search */}
+
+              {/* Begin: sideBar navigation */}
+              <div>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/">
+                      <div className="text-sm text-white font-semibold focus:text-yellow-500">
+                        Home
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services">
+                      <div className="text-sm text-white font-semibold">
+                        Services
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/our-portfolio">
+                      <div className="text-sm text-white font-semibold">
+                        Works
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <div className="relative">
+                      <input type="checkbox" id="aboutUs" className="peer absolute top-0 left-0 right-0 h-[24px] appearance-none opacity-0 z-10" />
+
+                      <label
+                        htmlFor="aboutUs"
+                        className="text-sm text-white font-semibold"
+                      >
+                        About Us
+                      </label>
+
+                      <div className="absolute top-0 right-0 -rotate-90 peer-checked:rotate-0 peer-checked:text-yellow-500 transition-all duration-700">
+                        <FontAwesomeIcon icon={faChevronDown} />
+                      </div>
+
+                      <label htmlFor="aboutUs" className="block max-h-0 pointer-events-none peer-checked:max-h-[300px] origin-top peer-checked:pointer-events-auto duration-700 overflow-hidden">
+                        <ul className="space-y-4 ml-4 mt-4">
+                          <li>
+                            <Link href="/our-mission">
+                              <div className="text-sm text-white font-semibold">
+                                Our Mission
+                              </div>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/our-history">
+                              <div className="text-sm text-white font-semibold">
+                                Our History
+                              </div>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/our-team">
+                              <div className="text-sm text-white font-semibold">
+                                Our Team
+                              </div>
+                            </Link>
+                          </li>
+                        </ul>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <Link href="/news">
+                      <div className="text-sm text-white font-semibold">
+                        News
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/faq">
+                      <div className="text-sm text-white font-semibold">
+                        FAQ
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contacts">
+                      <div className="text-sm text-white font-semibold">
+                        Contacts
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              {/* End: sideBar navigation */}
+            </div>
+          </div>
+        </div>
+        {/* end: sideBar left */}
+
+        {/* begin: sideBar right */}
+        <div
+          className={
+            sideBarRight
               ? "absolute top-0 right-0 min-h-screen w-[430px] bg-black px-14 py-20 opacity-100 translate-x-0 duration-700"
               : "absolute top-0 right-0 min-h-screen w-[430px] bg-black px-14 py-20 opacity-0 translate-x-[150%] duration-700"
           }
@@ -366,7 +516,7 @@ export default function Header() {
               <FontAwesomeIcon
                 icon={faXmark}
                 className="text-yellow-500 text-2xl cursor-pointer"
-                onClick={handleSideBar}
+                onClick={handleSideBarRight}
               />
             </div>
 
@@ -440,7 +590,7 @@ export default function Header() {
             </div>
           </div>
         </div>
-        {/* end: sideBar */}
+        {/* end: sideBar right */}
       </div>
     </header>
   );

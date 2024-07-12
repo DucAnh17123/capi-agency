@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <div className="mt-header-height">{children}</div>
+        <div className="mt-[60px] xl:mt-[100px]">{children}</div>
         <Footer />
 
         <div className="fixed group bottom-[60px] right-[-20px] flex gap-2 text-yellow-500 uppercase cursor-pointer -rotate-90 font-semibold text-sm z-50 items-center">
