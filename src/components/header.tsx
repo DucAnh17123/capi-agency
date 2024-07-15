@@ -376,8 +376,8 @@ export default function Header() {
         <div
           className={
             sideBarLeft
-              ? "absolute top-0 left-0 min-h-screen w-[400px] bg-[#232323] px-8 py-12 opacity-100 translate-x-0 duration-700"
-              : "absolute top-0 left-0 min-h-screen w-[400px] bg-[#232323] px-8 py-12 opacity-0 translate-x-[-150%] duration-700"
+              ? "absolute top-0 left-0 min-h-screen max-w-screen-lg bg-[#232323] px-8 py-12 opacity-100 translate-x-0 duration-700"
+              : "absolute top-0 left-0 min-h-screen max-w-screen-lg bg-[#232323] px-8 py-12 opacity-0 translate-x-[-150%] duration-700"
           }
           onClick={(e) => e.stopPropagation()}
         >
@@ -515,7 +515,7 @@ export default function Header() {
             <div className="absolute top-[-5%] left-[-30%]">
               <FontAwesomeIcon
                 icon={faXmark}
-                className="text-yellow-500 text-2xl cursor-pointer"
+                className="text-yellow-500 text-2xl cursor-pointer p-2"
                 onClick={handleSideBarRight}
               />
             </div>

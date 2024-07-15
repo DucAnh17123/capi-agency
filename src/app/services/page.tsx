@@ -63,8 +63,8 @@ export default function Service() {
           (Features)
         </div>
         <div className="grid grid-cols-3 gap-10">
-          <div className="col-span-1">
-            <div className="text-7xl font-bold leading-[5.5rem]">
+          <div className="col-span-3 xl:col-span-1">
+            <div className="text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold xl:leading-[5.5rem] tracking-tight lg:tracking-tighter">
               Crafting Personalized Solutions
             </div>
             <button className="group/btn btn-primary flex items-center gap-3 mt-5">
@@ -73,10 +73,10 @@ export default function Service() {
             </button>
           </div>
 
-          <div className="col-span-2">
-            <div className="flex flex-row flex-wrap justify-between items-stretch h-full">
-              <Link href="" className="basis-1/2">
-                <div className="flex gap-6 px-8 py-4">
+          <div className="col-span-3 xl:col-span-2">
+            <div className="grid grid-cols-2 gap-16 items-center h-full">
+              <Link href="" className="col-span-2 md:col-span-1">
+                <div className="flex gap-6">
                   <div>
                     <FontAwesomeIcon icon={faShapes} className="text-5xl" />
                   </div>
@@ -92,8 +92,8 @@ export default function Service() {
                 </div>
               </Link>
 
-              <Link href="" className="basis-1/2">
-                <div className="flex gap-6 px-8 py-4">
+              <Link href="" className="col-span-2 md:col-span-1">
+                <div className="flex gap-6">
                   <div>
                     <FontAwesomeIcon icon={faShapes} className="text-5xl" />
                   </div>
@@ -109,8 +109,8 @@ export default function Service() {
                 </div>
               </Link>
 
-              <Link href="" className="basis-1/2">
-                <div className="flex gap-6 px-8 py-4">
+              <Link href="" className="col-span-2 md:col-span-1">
+                <div className="flex gap-6">
                   <div>
                     <FontAwesomeIcon icon={faShapes} className="text-5xl" />
                   </div>
@@ -124,8 +124,8 @@ export default function Service() {
                 </div>
               </Link>
 
-              <Link href="" className="basis-1/2">
-                <div className="flex gap-6 px-8 py-4">
+              <Link href="" className="col-span-2 md:col-span-1">
+                <div className="flex gap-6">
                   <div>
                     <FontAwesomeIcon icon={faShapes} className="text-5xl" />
                   </div>

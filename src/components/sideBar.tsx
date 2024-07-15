@@ -274,15 +274,15 @@ export default function SideBar() {
           </div>
           <div className="space-y-7">
             <Link href="/1" className="block">
-              <div className="grid grid-cols-3 gap-4">
+              <div className="flex gap-4">
                 <Image
-                  className="col-span-1"
+                  className=""
                   src="/assets/images/general/post-image.jpg"
                   alt=""
-                  width={80}
-                  height={80}
+                  width={70}
+                  height={70}
                 ></Image>
-                <div className="col-span-2 flex flex-col justify-between">
+                <div className="flex flex-col justify-center gap-2 md:justify-between">
                   <div className="text-sm text-gray-400 font-semibold uppercase">
                     (January 2024)
                   </div>
@@ -398,7 +398,7 @@ export default function SideBar() {
         <div className="grid grid-cols-3 gap-4 w-full">
           <label htmlFor="gallery" className="relative group/galleryImage">
             <Image
-              className="cursor-pointer hover:brightness-75 transition-all duration-500"
+              className="cursor-pointer hover:brightness-75 transition-all duration-500 w-full h-auto"
               src="/assets/images/general/post-image.jpg"
               alt=""
               width={80}
@@ -413,7 +413,7 @@ export default function SideBar() {
           </label>
           <label htmlFor="gallery" className="relative group/galleryImage">
             <Image
-              className="cursor-pointer hover:brightness-75 transition-all duration-500"
+              className="cursor-pointer hover:brightness-75 transition-all duration-500 w-full h-auto"
               src="/assets/images/general/post-image.jpg"
               alt=""
               width={80}
@@ -428,7 +428,7 @@ export default function SideBar() {
           </label>
           <label htmlFor="gallery" className="relative group/galleryImage">
             <Image
-              className="cursor-pointer hover:brightness-75 transition-all duration-500"
+              className="cursor-pointer hover:brightness-75 transition-all duration-500 w-full h-auto"
               src="/assets/images/general/post-image.jpg"
               alt=""
               width={80}
@@ -443,7 +443,7 @@ export default function SideBar() {
           </label>
           <label htmlFor="gallery" className="relative group/galleryImage">
             <Image
-              className="cursor-pointer hover:brightness-75 transition-all duration-500"
+              className="cursor-pointer hover:brightness-75 transition-all duration-500 w-full h-auto"
               src="/assets/images/general/post-image.jpg"
               alt=""
               width={80}
@@ -458,7 +458,7 @@ export default function SideBar() {
           </label>
           <label htmlFor="gallery" className="relative group/galleryImage">
             <Image
-              className="cursor-pointer hover:brightness-75 transition-all duration-500"
+              className="cursor-pointer hover:brightness-75 transition-all duration-500 w-full h-auto"
               src="/assets/images/general/post-image.jpg"
               alt=""
               width={80}
@@ -473,7 +473,7 @@ export default function SideBar() {
           </label>
           <label htmlFor="gallery" className="relative group/galleryImage">
             <Image
-              className="cursor-pointer hover:brightness-75 transition-all duration-500"
+              className="cursor-pointer hover:brightness-75 transition-all duration-500 w-full h-auto"
               src="/assets/images/general/post-image.jpg"
               alt=""
               width={80}

@@ -13,8 +13,8 @@ const config: Config = {
         padding: {
           DEFAULT: '1rem',
           sm: '1rem',
-          md: '1.5rem',
-          lg: '1rem',
+          md: '1.25rem',
+          lg: '1.5rem',
           xl: '0rem',
           '2xl': '0rem',
         },

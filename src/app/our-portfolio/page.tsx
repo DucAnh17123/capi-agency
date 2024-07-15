@@ -1,25 +1,29 @@
 import Link from "next/link";
 
-
 import PageTitle from "@/components/pageTitle";
 import ProductCard from "@/components/productCard";
 
 export default function OurPortfolio() {
   return (
     <div>
-      <PageTitle title="Capi agency portfolio" subTitle="Capi agency portfolio"/>
+      <PageTitle
+        title="Capi agency portfolio"
+        subTitle="Capi agency portfolio"
+      />
 
       <div className="container mx-auto">
-        <div className="flex justify-around gap-20">
-          <div className="flex-1">
+        <div className="grid grid-cols-2 gap-4">
+          <div className="col-span-2 md:col-span-1">
             <div className="text-sm text-gray-400 font-semibold uppercase my-1">
               (latest works)
             </div>
-            <div className="text-7xl font-bold leading-[5.5rem]">Our cases</div>
+            <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold xl:leading-[5.5rem]">
+              Our Cases
+            </div>
           </div>
 
-          <div className=" flex-1 text-sm text-gray-500 font-semibold uppercase my-1 text-end flex items-center justify-end">
-            <div className="w-[70%]">
+          <div className="col-span-2 md:col-span-1 text-sm text-gray-500 font-semibold uppercase my-1 md:text-end flex items-center justify-end">
+            <div className="xl:w-[70%]">
               OUR AGENCY IS A CREATIVE AND TECHNOLOGY-DRIVEN FIRM THAT
               SPECIALIZES IN PROVIDING A WIDE RANGE OF DIGITAL DESIGN SERVICES
               TO CLIENTS.
@@ -27,7 +31,7 @@ export default function OurPortfolio() {
           </div>
         </div>
 
-        <div className="flex w-full gap-2 py-10">
+        <div className="flex w-full gap-2 py-10 justify-center xl:justify-normal">
           <div className="btn-secondary-black">all</div>
           <div className="btn-secondary-black">game ui</div>
           <div className="btn-secondary-black">web app</div>
@@ -35,13 +39,25 @@ export default function OurPortfolio() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-6 mx-6">
-        <ProductCard isFixHeight={false} />
-        <ProductCard isFixHeight={false} />
-        <ProductCard isFixHeight={false} />
-        <ProductCard isFixHeight={false} />
-        <ProductCard isFixHeight={false} />
-        <ProductCard isFixHeight={false} />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-6">
+        <div className="col-span-1">
+          <ProductCard isFixHeight={false} />
+        </div>
+        <div className="col-span-1">
+          <ProductCard isFixHeight={false} />
+        </div>
+        <div className="col-span-1">
+          <ProductCard isFixHeight={false} />
+        </div>
+        <div className="col-span-1">
+          <ProductCard isFixHeight={false} />
+        </div>
+        <div className="col-span-1">
+          <ProductCard isFixHeight={false} />
+        </div>
+        <div className="col-span-1">
+          <ProductCard isFixHeight={false} />
+        </div>
       </div>
 
       <div className="flex justify-center items-center pt-10 mb-20">
