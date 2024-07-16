@@ -47,7 +47,7 @@ export default function Home() {
           <div className="uppercase text-sm font-semibold text-gray-500">
             (VỀ CAPI AGENCY)
           </div>
-          <div className="text-3xl md:text-6xl md:leading-[4.5rem] lg:text-7xl xl:leading-[5rem] font-semibold xl:px-28">
+          <div className="text-3xl md:text-6xl md:leading-[4.5rem] lg:text-7xl 2xl:text-[5rem] xl:leading-[5.5rem] font-semibold xl:px-28 tracking-tight">
             Đơn vị tiên phong trong{" "}
             <span className="text-green-500">đo lường</span>,{" "}
             <span className="text-yellow-500">phân tích</span> và định hướng{" "}

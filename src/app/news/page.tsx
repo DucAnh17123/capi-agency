@@ -15,10 +15,10 @@ export default function News() {
       <PageTitle title="news" subTitle="news"/>
 
       <div className="container mx-auto my-20 flex flex-row justify-center">
-        <div className="basis-full xl:basis-9/12">
+        <div className="basis-full xl:basis-10/12">
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 xl:col-span-9">
-              <div className="grid grid-cols1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <NewsCard />
                 <NewsCard />
                 <NewsCard />

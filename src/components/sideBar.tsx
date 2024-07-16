@@ -103,27 +103,31 @@ export default function SideBar() {
         {/* end: recent posts */}
 
         {/* begin:motto agency */}
-        <div className="relative w-full pt-[130%] bg-[url('/assets/images/general/motto-agency.jpg')] bg-center bg-cover bg-no-repeat">
-          <Link
-            href="/contacts"
-            className="absolute top-0 left-0 right-0 bottom-0 group/motto"
-          >
-            <div className="flex flex-col items-center px-4 py-14 text-center justify-between h-full">
-              <Image
-                src="/assets/images/general/motto-agency-logo.png"
-                alt=""
-                width={100}
-                height={50}
-              ></Image>
-              <div className="text-md text-white font-semibold">
-                Connecting Minds, Creating Magic
-              </div>
-              <button className="rounded-full text-xs font-semibold py-4 px-5 uppercase text-white bg-black group-hover/motto:bg-yellow-500 transition-all duration-500 flex items-center gap-3">
-                Read more
-                <div className="group-hover/motto:scale-125 bg-white w-2 h-2 rounded-full transition-all duration-700"></div>
-              </button>
+        <div className="flex justify-center xl:justify-start items-center">
+          <div className="w-[270px]">
+            <div className="relative W-full md:w-full pt-[130%] bg-[url('/assets/images/general/motto-agency.jpg')] bg-center bg-cover bg-no-repeat">
+              <Link
+                href="/contacts"
+                className="absolute top-0 left-0 right-0 bottom-0 group/motto"
+              >
+                <div className="flex flex-col items-center px-4 py-14 text-center justify-between h-full">
+                  <Image
+                    src="/assets/images/general/motto-agency-logo.png"
+                    alt=""
+                    width={100}
+                    height={50}
+                  ></Image>
+                  <div className="text-md text-white font-semibold">
+                    Connecting Minds, Creating Magic
+                  </div>
+                  <button className="rounded-full text-xs font-semibold py-4 px-5 uppercase text-white bg-black group-hover/motto:bg-yellow-500 transition-all duration-500 flex items-center gap-3">
+                    Read more
+                    <div className="group-hover/motto:scale-125 bg-white w-2 h-2 rounded-full transition-all duration-700"></div>
+                  </button>
+                </div>
+              </Link>
             </div>
-          </Link>
+          </div>
         </div>
         {/* end:motto agency */}
 
@@ -165,7 +169,10 @@ export default function SideBar() {
             Categories
           </div>
           <div className="space-y-1">
-            <Link href="category/1" className="relative block w-full group/link">
+            <Link
+              href="category/1"
+              className="relative block w-full group/link"
+            >
               <div>
                 <FontAwesomeIcon
                   icon={faCaretRight}
@@ -176,7 +183,10 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="category/1" className="relative block w-full group/link">
+            <Link
+              href="category/1"
+              className="relative block w-full group/link"
+            >
               <div>
                 <FontAwesomeIcon
                   icon={faCaretRight}
@@ -187,7 +197,10 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="category/1" className="relative block w-full group/link">
+            <Link
+              href="category/1"
+              className="relative block w-full group/link"
+            >
               <div>
                 <FontAwesomeIcon
                   icon={faCaretRight}
@@ -198,7 +211,10 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="category/1" className="relative block w-full group/link">
+            <Link
+              href="category/1"
+              className="relative block w-full group/link"
+            >
               <div>
                 <FontAwesomeIcon
                   icon={faCaretRight}
@@ -209,7 +225,10 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
-            <Link href="category/1" className="relative block w-full group/link">
+            <Link
+              href="category/1"
+              className="relative block w-full group/link"
+            >
               <div>
                 <FontAwesomeIcon
                   icon={faCaretRight}
@@ -225,43 +244,49 @@ export default function SideBar() {
         {/* end: Categories */}
 
         {/* begin: User card */}
-        <div className="relative w-full pt-[150%] bg-[url('/assets/images/general/user-image.jpg')] bg-center bg-cover bg-no-repeat">
-          <div className="absolute bottom-0 left-0 right-0 text-white p-6">
-            <div className="text-xs font-medium uppercase">author of blog</div>
-            <div className="text-2xl font-bold mt-1 mb-3">Tomm Beross</div>
-            <div className="flex items-center gap-5">
-              <Link href="">
-                <div>
-                  <FontAwesomeIcon
-                    className="text-sm font-semibold hover:opacity-70"
-                    icon={faXTwitter}
-                  />
+        <div className="flex justify-center xl:justify-start items-center">
+          <div className="w-[270px]">
+            <div className="relative w-full pt-[150%] bg-[url('/assets/images/general/user-image.jpg')] bg-center bg-cover bg-no-repeat">
+              <div className="absolute bottom-0 left-0 right-0 text-white p-6">
+                <div className="text-xs font-medium uppercase">
+                  author of blog
                 </div>
-              </Link>
-              <Link href="">
-                <div>
-                  <FontAwesomeIcon
-                    className="text-sm font-semibold hover:opacity-70"
-                    icon={faFacebookF}
-                  />
+                <div className="text-2xl font-bold mt-1 mb-3">Tomm Beross</div>
+                <div className="flex items-center gap-5">
+                  <Link href="">
+                    <div>
+                      <FontAwesomeIcon
+                        className="text-sm font-semibold hover:opacity-70"
+                        icon={faXTwitter}
+                      />
+                    </div>
+                  </Link>
+                  <Link href="">
+                    <div>
+                      <FontAwesomeIcon
+                        className="text-sm font-semibold hover:opacity-70"
+                        icon={faFacebookF}
+                      />
+                    </div>
+                  </Link>
+                  <Link href="">
+                    <div>
+                      <FontAwesomeIcon
+                        className="text-sm font-semibold hover:opacity-70"
+                        icon={faLinkedinIn}
+                      />
+                    </div>
+                  </Link>
+                  <Link href="">
+                    <div>
+                      <FontAwesomeIcon
+                        className="text-sm font-semibold hover:opacity-70"
+                        icon={faInstagram}
+                      />
+                    </div>
+                  </Link>
                 </div>
-              </Link>
-              <Link href="">
-                <div>
-                  <FontAwesomeIcon
-                    className="text-sm font-semibold hover:opacity-70"
-                    icon={faLinkedinIn}
-                  />
-                </div>
-              </Link>
-              <Link href="">
-                <div>
-                  <FontAwesomeIcon
-                    className="text-sm font-semibold hover:opacity-70"
-                    icon={faInstagram}
-                  />
-                </div>
-              </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -292,16 +317,17 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
+
             <Link href="/1" className="block">
-              <div className="grid grid-cols-3 gap-4">
+              <div className="flex gap-4">
                 <Image
-                  className="col-span-1"
+                  className=""
                   src="/assets/images/general/post-image.jpg"
                   alt=""
-                  width={80}
-                  height={80}
+                  width={70}
+                  height={70}
                 ></Image>
-                <div className="col-span-2 flex flex-col justify-between">
+                <div className="flex flex-col justify-center gap-2 md:justify-between">
                   <div className="text-sm text-gray-400 font-semibold uppercase">
                     (January 2024)
                   </div>
@@ -311,16 +337,17 @@ export default function SideBar() {
                 </div>
               </div>
             </Link>
+
             <Link href="/1" className="block">
-              <div className="grid grid-cols-3 gap-4">
+              <div className="flex gap-4">
                 <Image
-                  className="col-span-1"
+                  className=""
                   src="/assets/images/general/post-image.jpg"
                   alt=""
-                  width={80}
-                  height={80}
+                  width={70}
+                  height={70}
                 ></Image>
-                <div className="col-span-2 flex flex-col justify-between">
+                <div className="flex flex-col justify-center gap-2 md:justify-between">
                   <div className="text-sm text-gray-400 font-semibold uppercase">
                     (January 2024)
                   </div>

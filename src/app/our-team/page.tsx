@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 export default function OurMission() {
   return (
     <div>
-      <PageTitle title="Our team" subTitle="our team"/>
+      <PageTitle title="Our team" subTitle="our team" />
 
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="container mx-auto flex justify-center mt-[6rem]">
+        <div className="basis-10/12 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="">
             <div className="text-sm text-gray-400 font-semibold uppercase my-1">
               (SUCCESSFUL TEAM)
@@ -40,7 +40,9 @@ export default function OurMission() {
             </div>
           </div>
         </div>
+      </div>
 
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-20">
           <UserCard />
           <UserCard />
@@ -59,8 +61,12 @@ export default function OurMission() {
             <div className="hidden md:block col-span-1"></div>
 
             <div className="p-8 md:p-0 col-span-2 md:col-span-1 flex justify-center flex-col items-start text-white gap-6">
-              <div className="text-sm uppercase font-semibold">(be part of us)</div>
-              <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">Join to the Our Skilled Team</div>
+              <div className="text-sm uppercase font-semibold">
+                (be part of us)
+              </div>
+              <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
+                Join to the Our Skilled Team
+              </div>
               <div className="md:w-[80%] leading-7">
                 Digital agencies are at the forefront of the digital landscape,
                 combining creative and technical expertise to help clients

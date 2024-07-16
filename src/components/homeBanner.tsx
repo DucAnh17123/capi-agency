@@ -13,9 +13,9 @@ export default function HomeBanner() {
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 pb-14 container mx-auto z-20">
-            <div className="flex flex-col md:flex-row space-y-10 justify-between h-full">
+            <div className="flex flex-col md:flex-row space-y-7 justify-between h-full">
               <div>
-                <div className="grid grid-cols-5 md:grid-cols-4 gap-5 text-white text-sm font-semibold">
+                <div className="grid grid-cols-5 md:grid-cols-4 gap-7 text-white text-sm font-semibold">
                   <div className="col-span-5 md:col-span-4 mx-auto md:mx-0">
                     <div className="uppercase w-fit font-medium cursor-pointer text-xs text-white py-1 px-2 rounded-full border-2 border-white hover:bg-white hover:text-black">
                       Creative studio
@@ -36,6 +36,7 @@ export default function HomeBanner() {
                   <div className="col-span-3">Tháng 10 – 2018</div>
                 </div>
               </div>
+
               <div className="flex justify-center items-end gap-2">
                 <div className="btn-secondary">
                   behance

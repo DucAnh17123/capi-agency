@@ -18,7 +18,7 @@ export default function OurMission() {
     <div>
       <PageTitle title="mission" subTitle="mission" />
 
-      <div className="xl:container xl:mx-auto">
+      <div className="xl:container xl:mx-auto mt-[6rem]">
         <div className="relative pt-[40%] bg-[url('/assets/images/general/mission-bg.jpg')] w-full h-auto bg-center bg-cover bg-no-repeat">
           <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-t from-white to-transparent"></div>
         </div>

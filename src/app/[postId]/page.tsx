@@ -26,14 +26,14 @@ export default function PostDetail() {
 
   return (
     <>
-      <div className="mt-header-height">
+      <div>
         <PostBanner />
       </div>
 
-      <div className="container mx-auto my-20 flex flex-row justify-center">
-        <div className="basis-9/12">
-          <div className="grid grid-cols-12 gap-10">
-            <div className="col-span-9 space-y-12">
+      <div className="container mx-auto my-20 flex justify-center">
+        <div className="basis-full xl:basis-10/12 2xl:basis-9/12">
+          <div className="grid grid-cols-12 gap-0 md:gap-10">
+            <div className="col-span-12 xl:col-span-9 space-y-12">
               {/* begin: post paragraph */}
               <div className="text-sm leading-7 text-gray-600 text-justify space-y-3">
                 <div className="first-letter:text-black first-letter:text-4xl first-letter:font-semibold first-letter:mr-3 first-letter:float-left">
@@ -69,7 +69,7 @@ export default function PostDetail() {
 
               {/* begin: post image */}
               <div className="grid grid-cols-2 gap-8">
-                <div>
+                <div className="col-span-2 md:col-span-1">
                   <Image
                     className="w-full h-auto"
                     src="/assets/images/general/post-detail-image.jpg"
@@ -78,7 +78,7 @@ export default function PostDetail() {
                     height={400}
                   ></Image>
                 </div>
-                <div>
+                <div className="col-span-2 md:col-span-1">
                   <Image
                     className="w-full h-auto"
                     src="/assets/images/general/post-detail-image.jpg"
@@ -109,7 +109,7 @@ export default function PostDetail() {
 
               {/* begin: post image */}
               <div className="grid grid-cols-2 gap-8">
-                <div>
+                <div className="col-span-2 md:col-span-1">
                   <Image
                     className="w-full h-auto"
                     src="/assets/images/general/post-detail-image.jpg"
@@ -118,7 +118,7 @@ export default function PostDetail() {
                     height={400}
                   ></Image>
                 </div>
-                <div className="flex items-center">
+                <div className="col-span-2 md:col-span-1 flex items-center">
                   <div className="space-y-10">
                     <div className="relative pl-14 space-y-3">
                       <div className="absolute top-[-10%] left-[0] text-8xl font-semibold text-yellow-500">
@@ -167,8 +167,8 @@ export default function PostDetail() {
 
               {/* begin: tags */}
               <div className="space-y-9">
-                <div className="flex justify-between">
-                  <div className="flex justify-between gap-2">
+                <div className="flex flex-col md:flex-row justify-between gap-6">
+                  <div className="flex justify-center md:justify-between gap-2">
                     <Link href="" className="block">
                       <div className="py-1 px-3 border-[1px] border-black rounded-full text-black text-xs font-semibold hover:text-white hover:bg-black transition-colors duration-300">
                         branding
@@ -186,7 +186,7 @@ export default function PostDetail() {
                     </Link>
                   </div>
 
-                  <div className="flex items-center gap-5">
+                  <div className="flex justify-center items-center gap-5">
                     <Link href="">
                       <div>
                         <FontAwesomeIcon
@@ -230,7 +230,7 @@ export default function PostDetail() {
                       </div>
                     </button>
 
-                    <div className="text-lg font-semibold group-hover:underline">
+                    <div className="hidden md:block text-lg font-semibold group-hover:underline">
                       Navigating the Digital Landscape
                     </div>
                   </div>
@@ -249,7 +249,7 @@ export default function PostDetail() {
                       </div>
                     </button>
 
-                    <div className="text-lg font-semibold group-hover:underline">
+                    <div className="hidden block text-lg font-semibold group-hover:underline">
                       Exploring UI/UX Trends 2024
                     </div>
                   </div>
@@ -259,7 +259,7 @@ export default function PostDetail() {
 
               <div>
                 <div className="text-3xl font-bold mb-8">Related Posts</div>
-                <div className="grid grid-cols-2 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                   <NewsCard />
                   <NewsCard />
                 </div>
@@ -270,7 +270,7 @@ export default function PostDetail() {
               {/* end: comments */}
             </div>
 
-            <div className="col-span-3">
+            <div className="col-span-12 xl:col-span-3">
               <SideBar />
             </div>
           </div>

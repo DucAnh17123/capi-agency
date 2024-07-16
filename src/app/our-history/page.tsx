@@ -41,8 +41,8 @@ export default function OurHistory() {
     <div className="w-full">
       <PageTitle title="History" subTitle="history" />
 
-      <div className="container mx-auto">
-        <div className="grid grid-cols-2 gap-6">
+      <div className="container mx-auto flex justify-center mt-[6rem]">
+        <div className="basis-full grid grid-cols-2 gap-6">
           <div className="col-span-2 md:col-span-1">
             <div className="text-sm text-gray-400 font-semibold uppercase my-2">
               (little history)
@@ -58,7 +58,9 @@ export default function OurHistory() {
             </button>
           </div>
         </div>
+      </div>
 
+      <div className="container mx-auto">
         <div className="relative w-full h-auto my-20">
           <div className="hidden md:block absolute top-0 left-[50%] translate-x-[-50%] w-2 h-2 rounded-full bg-black"></div>
           <div className="hidden md:block absolute bottom-0 left-[50%] translate-x-[-50%] w-2 h-2 rounded-full bg-black"></div>
