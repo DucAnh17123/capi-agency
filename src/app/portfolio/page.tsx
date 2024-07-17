@@ -12,8 +12,8 @@ export default function Portfolio() {
       <PageTitle title="archive" subTitle="PORTFOLIO" />
 
       <div className="container mx-auto flex justify-center my-20">
-        <div className="basis-9/12">
-          <div className="grid grid-cols-3 gap-8">
+        <div className="basis-full xl:basis-10/12 2xl:basis-9/12">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-[1.5rem] lg:gap-[2rem] xl:gap-8">
           <ProductCard isFixHeight={false} />
           <ProductCard isFixHeight={false} />
           <ProductCard isFixHeight={false} />

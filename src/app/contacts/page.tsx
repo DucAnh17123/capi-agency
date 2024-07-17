@@ -1,17 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import PageTitle from "@/components/pageTitle";
+import { fetchInformationCompanyData } from "@/js/function";
 
 export default function Contacts() {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-
-  const cursorHandle = (event: any) => {
-    setCursorPosition({ x: event.clientX, y: event.clientY });
-  };
-
+  const [informationCompanyData, setInformationCompanyData] = useState<any>({});
+  
+  useEffect(() => {
+    fetchInformationCompanyData().then((data: any) => {
+      setInformationCompanyData(data);
+    });
+  }, []);
+  
+  console.log("🚀 ~ Contacts ~ informationCompanyData:", informationCompanyData)
   return (
     <div>
       <PageTitle title="contacts" subTitle="contacts" />
@@ -33,34 +37,57 @@ export default function Contacts() {
                   Location
                 </div>
                 <div className="basis-full md:basis-7/12">
-                  35 To Vinh Dien str, Thanh Xuan, Hanoi, Vietnam
+                  {/* 35 To Vinh Dien str, Thanh Xuan, Hanoi, Vietnam */}
+                  {informationCompanyData?.address}
                 </div>
               </div>
+
               <div className="flex gap-2 md:gap-6 flex-wrap md:flex-nowrap">
                 <div className="basis-full md:basis-5/12 text-start md:text-end text-gray-400">
                   Give us a call
                 </div>
-                <div className="basis-full md:basis-7/12">+84 392 293 045</div>
+                {/* <div className="basis-full md:basis-7/12">
+                  {informationCompanyData.phones.map(
+                    (item: any, index: any) => {
+                      return <div key={index}>{item}</div>;
+                    }
+                  )}
+                </div> */}
+                <div className="basis-full md:basis-7/12">
+                  {informationCompanyData?.phones}
+                </div>
               </div>
+
+              <div className="flex gap-2 md:gap-6 flex-wrap md:flex-nowrap">
+                <div className="basis-full md:basis-5/12 text-start md:text-end text-gray-400">
+                  Email
+                </div>
+                <div className="basis-full md:basis-7/12">
+                  {informationCompanyData?.emails}
+                </div>
+              </div>
+
               <div className="flex gap-2 md:gap-6 flex-wrap md:flex-nowrap">
                 <div className="basis-full md:basis-5/12 text-start md:text-end text-gray-400">
                   Working hours
                 </div>
-                <div className="basis-full md:basis-7/12">mn – fr: 9 am – 6 pm</div>
-              </div>
-              <div className="flex gap-2 md:gap-6 flex-wrap md:flex-nowrap">
-                <div className="basis-full md:basis-5/12 text-start md:text-end text-gray-400">
+                <div className="basis-full md:basis-7/12">
+                  {informationCompanyData?.working_hours}
                 </div>
+              </div>
+
+              <div className="flex gap-2 md:gap-6 flex-wrap md:flex-nowrap">
+                <div className="basis-full md:basis-5/12 text-start md:text-end text-gray-400"></div>
                 <div className="basis-full md:basis-7/12 flex gap-1">
-                  <button className="uppercase w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white">
+                  <Link href={informationCompanyData.behance || "#"} className="uppercase w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white">
                     behance
-                  </button>
-                  <button className="uppercase w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white">
+                  </Link>
+                  <Link href={informationCompanyData.dribbble || "#"} className="uppercase w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white">
                     dribble
-                  </button>
-                  <button className="uppercase w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white">
+                  </Link>
+                  <Link href={informationCompanyData.facebook || "#"} className="uppercase w-fit font-medium cursor-pointer text-xs text-black py-1 px-2 rounded-full border-[1px] border-black hover:bg-black hover:text-white">
                     facebook
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

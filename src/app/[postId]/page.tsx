@@ -5,20 +5,37 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowLeft,
+  faArrowRight,
+  faArrowDown,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faXTwitter,
   faFacebookF,
   faPinterestP,
 } from "@fortawesome/free-brands-svg-icons";
+import { faComment, faHeart } from "@fortawesome/free-regular-svg-icons";
 
 import SideBar from "@/components/sideBar";
 import PostBanner from "@/components/postBanner";
 import NewsCard from "@/components/newsCard";
 import Comments from "@/components/comments";
 
-export default function PostDetail() {
+import { useState, useEffect } from "react";
+import { fetchNewDetail, getImgURLById } from "@/js/function";
+
+export default function PostDetail({ params }: any) {
   const router = useRouter();
+
+  const [newsDetail, setNewsDetail] = useState<any>({});
+
+  useEffect(() => {
+    fetchNewDetail(params.postId).then((data) => {
+      setNewsDetail(data);
+    });
+  }, [params.postId]);
+  console.log("🚀 ~ PostDetail ~ newsDetail:", newsDetail);
 
   const handleBack = () => {
     router.back();
@@ -26,16 +43,48 @@ export default function PostDetail() {
 
   return (
     <>
-      <div>
-        <PostBanner />
+      <div className="relative bg-[url('/assets/images/general/post-banner.jpg')] bg-center bg-cover bg-no-repeat w-full h-[420px] 2xl:h-[600px] ">
+        <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50"></div>
+
+        <div className="absolute right-0 left-0 bottom-0 z-[10]">
+          <div className="container mx-auto flex flex-row justify-center">
+            <div className="basis-full sl:basis-10/12 2xl:basis-9/12 text-white space-y-7 pb-14">
+              <div className="btn-secondary">digital</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white font-semibold tracking-tighter">
+                {newsDetail.title}
+              </div>
+              <div className="flex flex-col md:flex-row gap-7 md:gap-0 justify-between text-sm text-white uppercase font-medium">
+                <div>
+                  (JANUARY 2, 2024 BY <Link href="">NTKIEN2192</Link>)
+                </div>
+                <div className="flex gap-5">
+                  <div>
+                    <FontAwesomeIcon className="mr-2" icon={faComment} />
+                    <span>2</span>
+                  </div>
+                  <div>
+                    <FontAwesomeIcon className="mr-2" icon={faHeart} />
+                    <span>99</span>
+                  </div>
+                </div>
+              </div>
+              <div className="border-[1px] border-gray-400 rounded-full w-10 h-10 flex justify-center items-center cursor-pointer animate-bounce">
+                <FontAwesomeIcon
+                  className="text-2xl font-thin"
+                  icon={faArrowDown}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="container mx-auto my-20 flex justify-center">
         <div className="basis-full xl:basis-10/12 2xl:basis-9/12">
-          <div className="grid grid-cols-12 gap-0 md:gap-10">
+          <div className="grid grid-cols-12 space-y-16 xl:space-y-0 xl:gap-8">
             <div className="col-span-12 xl:col-span-9 space-y-12">
               {/* begin: post paragraph */}
-              <div className="text-sm leading-7 text-gray-600 text-justify space-y-3">
+              {/* <div className="text-sm leading-7 text-gray-600 text-justify space-y-3">
                 <div className="first-letter:text-black first-letter:text-4xl first-letter:font-semibold first-letter:mr-3 first-letter:float-left">
                   Digital marketing, staying ahead of the latest trends is
                   crucial for businesses aiming to create a strong online
@@ -64,11 +113,11 @@ export default function PostDetail() {
                   integrating social commerce strategies to boost conversions
                   and drive sales.
                 </div>
-              </div>
+              </div> */}
               {/* end: post paragraph */}
 
               {/* begin: post image */}
-              <div className="grid grid-cols-2 gap-8">
+              {/* <div className="grid grid-cols-2 gap-8 md:gap-[1.5rem] lg:gap-[2rem] xl:gap-8">
                 <div className="col-span-2 md:col-span-1">
                   <Image
                     className="w-full h-auto"
@@ -87,11 +136,11 @@ export default function PostDetail() {
                     height={400}
                   ></Image>
                 </div>
-              </div>
+              </div> */}
               {/* end: post image */}
 
               {/* begin: Microinteractions with Macro Impact */}
-              <div className="space-y-4">
+              {/* <div className="space-y-4">
                 <div className="text-[1.7rem] font-semibold tracking-tight">
                   Microinteractions with Macro Impact
                 </div>
@@ -104,11 +153,11 @@ export default function PostDetail() {
                   microinteractions contribute to a delightful and memorable
                   user journey.
                 </div>
-              </div>
+              </div> */}
               {/* begin: Microinteractions with Macro Impact */}
 
               {/* begin: post image */}
-              <div className="grid grid-cols-2 gap-8">
+              {/* <div className="grid grid-cols-2 gap-8 md:gap-[1.5rem] lg:gap-[2rem] xl:gap-8">
                 <div className="col-span-2 md:col-span-1">
                   <Image
                     className="w-full h-auto"
@@ -142,11 +191,11 @@ export default function PostDetail() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/* end: post image */}
 
               {/* begin: Augmented Reality (AR) Experiences */}
-              <div className="space-y-4">
+              {/* <div className="space-y-4">
                 <div className="text-[1.7rem] font-semibold tracking-tight">
                   Augmented Reality (AR) Experiences
                 </div>
@@ -162,8 +211,16 @@ export default function PostDetail() {
                   add depth and visual interest to interfaces, enhancing
                   storytelling and making the user experience more engaging.
                 </div>
-              </div>
+              </div> */}
               {/* begin: Augmented Reality (AR) Experiences */}
+
+              {/* <Image
+                src={getImgURLById(newsDetail.cover, 300, 300)}
+                alt=""
+                width={300}
+                height={300}
+              ></Image> */}
+              <div dangerouslySetInnerHTML={{ __html: newsDetail.content }} />
 
               {/* begin: tags */}
               <div className="space-y-9">
@@ -249,7 +306,7 @@ export default function PostDetail() {
                       </div>
                     </button>
 
-                    <div className="hidden block text-lg font-semibold group-hover:underline">
+                    <div className="hidden md:block text-lg font-semibold group-hover:underline">
                       Exploring UI/UX Trends 2024
                     </div>
                   </div>
@@ -259,7 +316,7 @@ export default function PostDetail() {
 
               <div>
                 <div className="text-3xl font-bold mb-8">Related Posts</div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[1.5rem] lg:gap-[2rem] xl:gap-8">
                   <NewsCard />
                   <NewsCard />
                 </div>

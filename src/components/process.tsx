@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper stylesimport 'swiper/css/scrollbar';
@@ -8,6 +9,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Mousewheel, Pagination } from "swiper/modules";
+
+import { fetchProcessData } from "@/js/function";
 
 export default function Process({
   title,
@@ -23,6 +26,14 @@ export default function Process({
   textColor: string;
 }) {
   const router = useRouter();
+  const [processData, setProcessData] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetchProcessData().then((data) => {
+      setProcessData(data);
+    });
+  }, []);
+
 
   return (
     <div className={`bg-[${backgroundColor}] text-[${textColor}]`}>
@@ -73,150 +84,27 @@ export default function Process({
             speed={600}
           >
             {" "}
-            <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
-              <div>
-                <div className="my-8 text-3xl font-semibold h-[72px] overflow-hidden text-ellipsis ">
-                  Access to latest technology
-                </div>
-                <div className="py-8 text-lg">
-                  Digital agencies consist of skilled professionals with
-                  experience in various digital disciplines, including
-                </div>
-                <button
-                  onClick={() => router.push("/about-us")}
-                  className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold"
-                >
-                  read more
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-125 duration-500"></div>
-                </button>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
-              <div>
-                <div className="my-8 text-3xl font-semibold h-[72px] overflow-hidden text-ellipsis ">
-                  Access to latest technology
-                </div>
-                <div className="py-8 text-lg">
-                  Digital agencies consist of skilled professionals with
-                  experience in various digital disciplines, including
-                </div>
-                <button
-                  onClick={() => router.push("/about-us")}
-                  className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold"
-                >
-                  read more
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-125 duration-500"></div>
-                </button>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
-              <div>
-                <div className="my-8 text-3xl font-semibold h-[72px] overflow-hidden text-ellipsis ">
-                  Access to latest technology
-                </div>
-                <div className="py-8 text-lg">
-                  Digital agencies consist of skilled professionals with
-                  experience in various digital disciplines, including
-                </div>
-                <button
-                  onClick={() => router.push("/about-us")}
-                  className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold"
-                >
-                  read more
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-125 duration-500"></div>
-                </button>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
-              <div>
-                <div className="my-8 text-3xl font-semibold h-[72px] overflow-hidden text-ellipsis ">
-                  Access to latest technology
-                </div>
-                <div className="py-8 text-lg">
-                  Digital agencies consist of skilled professionals with
-                  experience in various digital disciplines, including
-                </div>
-                <button
-                  onClick={() => router.push("/about-us")}
-                  className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold"
-                >
-                  read more
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-125 duration-500"></div>
-                </button>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
-              <div>
-                <div className="my-8 text-3xl font-semibold h-[72px] overflow-hidden text-ellipsis ">
-                  Access to latest technology
-                </div>
-                <div className="py-8 text-lg">
-                  Digital agencies consist of skilled professionals with
-                  experience in various digital disciplines, including
-                </div>
-                <button
-                  onClick={() => router.push("/about-us")}
-                  className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold"
-                >
-                  read more
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-125 duration-500"></div>
-                </button>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
-              <div>
-                <div className="my-8 text-3xl font-semibold h-[72px] overflow-hidden text-ellipsis ">
-                  Access to latest technology
-                </div>
-                <div className="py-8 text-lg">
-                  Digital agencies consist of skilled professionals with
-                  experience in various digital disciplines, including
-                </div>
-                <button
-                  onClick={() => router.push("/about-us")}
-                  className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold"
-                >
-                  read more
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-125 duration-500"></div>
-                </button>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
-              <div>
-                <div className="my-8 text-3xl font-semibold h-[72px] overflow-hidden text-ellipsis ">
-                  Access to latest technology
-                </div>
-                <div className="py-8 text-lg">
-                  Digital agencies consist of skilled professionals with
-                  experience in various digital disciplines, including
-                </div>
-                <button
-                  onClick={() => router.push("/about-us")}
-                  className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold"
-                >
-                  read more
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-125 duration-500"></div>
-                </button>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="absolute top-0 bottom-0 left-0 right-0 w-full">
-              <div>
-                <div className="my-8 text-3xl font-semibold h-[72px] overflow-hidden text-ellipsis ">
-                  Access to latest technology
-                </div>
-                <div className="py-8 text-lg">
-                  Digital agencies consist of skilled professionals with
-                  experience in various digital disciplines, including
-                </div>
-                <button
-                  onClick={() => router.push("/about-us")}
-                  className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold"
-                >
-                  read more
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-125 duration-500"></div>
-                </button>
-              </div>
-            </SwiperSlide>
+            {processData.map((item, index) => {
+              return (
+                <SwiperSlide key={index} className="absolute top-0 bottom-0 left-0 right-0 w-full">
+                  <div>
+                    <div className="my-8 text-3xl font-semibold h-[72px] overflow-hidden text-ellipsis ">
+                      {item.title}
+                    </div>
+                    <div className="py-8 text-lg">
+                      {item.description}
+                    </div>
+                    <button
+                      onClick={() => router.push("/about-us")}
+                      className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-sm font-semibold"
+                    >
+                      read more
+                      <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-125 duration-500"></div>
+                    </button>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </div>

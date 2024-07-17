@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function ProjectCard() {
+export default function ProjectCard({news}: any) {
   return (
     <div className="shadow-md rounded-xl">
       <div className="relative bg-[url('/assets/images/general/post-banner.jpg')] bg-center bg-cover bg-no-repeat w-full h-auto pt-[60%] rounded-t-xl">
@@ -10,7 +10,7 @@ export default function ProjectCard() {
           </div>
         </Link>
       </div>
-      <div className="p-10 space-y-4">
+      <div className="p-6 2xl:p-10 space-y-4">
         <div className="text-gray-500 text-sm font-semibold uppercase">
           (JANUARY 2, 2024 BY{" "}
           <Link href="/author/1" className="hover:text-gray-900">
@@ -18,9 +18,9 @@ export default function ProjectCard() {
           </Link>
           )
         </div>
-        <Link href="/1" className="block hover:opacity-80">
+        <Link href={`/${news.slug}`} className="block hover:opacity-80">
           <div className="text-gray-700 text-3xl font-semibold">
-            Unraveling Marketing Trends
+            {news.title}
           </div>
         </Link>
         <div className="text-sm leading-6 text-gray-600 text-justify">
@@ -28,7 +28,7 @@ export default function ProjectCard() {
           digital solutions and achieving measurable results for their clients.
           These goals may vary depending on the agency’s.
         </div>
-        <Link href="/1" className="block">
+        <Link href={`/${news.slug}`} className="block">
           <div className="group/btn flex items-center gap-2 text-yellow-500 uppercase text-xs font-semibold">
             <div>read more</div>
             <div className="w-2 h-2 bg-yellow-500 rounded-full group-hover/btn:scale-150 duration-500"></div>

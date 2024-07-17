@@ -139,7 +139,7 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-[1.5rem] lg:gap-[2rem] xl:gap-8">
           <NewsCard />
           <NewsCard />
           <NewsCard />

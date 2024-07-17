@@ -1,25 +1,40 @@
+"use client";
+
 import PageTitle from "@/components/pageTitle";
 import ProjectCard from "@/components/projectCard";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function Tag() {
+import { useState, useEffect } from "react";
+import { fetchNewsListByCategory } from "@/js/function";
+
+export default function Category({ params }: any) {
+  const [newsData, setNewsData] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetchNewsListByCategory(params.slug).then((res) => {
+      setNewsData(res);
+    });
+  }, [params.slug]);
+
   return (
     <div>
-      <PageTitle title="Branding" subTitle='POSTS TAGGED "BRANDING"' />
+      <PageTitle title="digital" subTitle='ARCHIVE BY CATEGORY "DIGITAL"' />
 
       <div className="container mx-auto flex justify-center my-10 xl:my-20">
         <div className="basis-full xl:basis-10/12 2xl:basis-9/12">
           <div className="text-center text-3xl font-semibold tracking-tight">
-            Tag: <span className="text-yellow-500">Branding</span>
+            Category: <span className="text-yellow-500">Digital</span>
           </div>
           <div className="space-y-10 lg:space-y-20 mt-14">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            {newsData.map((item, index) => {
+              return (
+                <div key={index}>
+                  <ProjectCard news={item}/>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

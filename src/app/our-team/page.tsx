@@ -16,7 +16,7 @@ export default function OurMission() {
       <PageTitle title="Our team" subTitle="our team" />
 
       <div className="container mx-auto flex justify-center mt-[6rem]">
-        <div className="basis-10/12 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="basis-full xl:basis-10/12 2xl:basis-9/12 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="">
             <div className="text-sm text-gray-400 font-semibold uppercase my-1">
               (SUCCESSFUL TEAM)
@@ -43,7 +43,7 @@ export default function OurMission() {
       </div>
 
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-20">
+        <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-8 md:gap-[1.5rem] lg:gap-[2rem] xl:gap-8 my-20">
           <UserCard />
           <UserCard />
           <UserCard />

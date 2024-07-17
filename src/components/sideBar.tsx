@@ -19,7 +19,18 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
+import { useState, useEffect } from "react";
+import { fetchNewsCategories } from "@/js/function";
+
 export default function SideBar() {
+
+
+  const [newsCategories, setNewCategories] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetchNewsCategories().then((res) => setNewCategories(res));
+  }, []);
+
   return (
     <>
       <div className="relative">
@@ -49,7 +60,7 @@ export default function SideBar() {
                   icon={faFile}
                   className="text-xs text-gray-400 group-hover/link:text-yellow-500 mt-1"
                 />
-                <div className="text-sm text-gray-500 font-semibold">
+                <div className="text-md xl:text-sm text-gray-500 font-semibold">
                   Unraveling Marketing Trends
                 </div>
               </div>
@@ -60,7 +71,7 @@ export default function SideBar() {
                   icon={faFile}
                   className="text-xs text-gray-400 group-hover/link:text-yellow-500 mt-1"
                 />
-                <div className="text-sm text-gray-500 font-semibold">
+                <div className="text-md xl:text-sm text-gray-500 font-semibold">
                   Navigating the Digital Landscape
                 </div>
               </div>
@@ -71,7 +82,7 @@ export default function SideBar() {
                   icon={faFile}
                   className="text-xs text-gray-400 group-hover/link:text-yellow-500 mt-1"
                 />
-                <div className="text-sm text-gray-500 font-semibold">
+                <div className="text-md xl:text-sm text-gray-500 font-semibold">
                   Unlocking the Power of Photo
                 </div>
               </div>
@@ -82,7 +93,7 @@ export default function SideBar() {
                   icon={faFile}
                   className="text-xs text-gray-400 group-hover/link:text-yellow-500 mt-1"
                 />
-                <div className="text-sm text-gray-500 font-semibold">
+                <div className="text-md xl:text-sm text-gray-500 font-semibold">
                   Exploring UI/UX Trends 2024
                 </div>
               </div>
@@ -93,7 +104,7 @@ export default function SideBar() {
                   icon={faFile}
                   className="text-xs text-gray-400 group-hover/link:text-yellow-500 mt-1"
                 />
-                <div className="text-sm text-gray-500 font-semibold">
+                <div className="text-md xl:text-sm text-gray-500 font-semibold">
                   The Psychology of Color in Branding
                 </div>
               </div>
@@ -169,76 +180,26 @@ export default function SideBar() {
             Categories
           </div>
           <div className="space-y-1">
-            <Link
-              href="category/1"
-              className="relative block w-full group/link"
-            >
-              <div>
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="absolute top-0 left-0 text-xl w-0 opacity-0 group-hover/link:w-[10px] group-hover/link:opacity-100 text-yellow-500 mt-[2px] duration-300"
-                />
-                <div className="text-md text-gray-400 font-medium group-hover/link:pl-5 group-hover/link:text-gray-600 transition-all duration-300">
-                  Branding (4)
+            {newsCategories.map((item, index) => {
+              return (
+                <div key={index}>
+                  <Link
+                    href={`category/${item.slug}`}
+                    className="relative block w-full group/link"
+                  >
+                    <div>
+                      <FontAwesomeIcon
+                        icon={faCaretRight}
+                        className="absolute top-0 left-0 text-xl w-0 opacity-0 group-hover/link:w-[10px] group-hover/link:opacity-100 text-yellow-500 mt-[2px] duration-300"
+                      />
+                      <div className="text-md text-gray-400 font-medium group-hover/link:pl-5 group-hover/link:text-gray-600 transition-all duration-300">
+                        {item.title}
+                      </div>
+                    </div>
+                  </Link>
                 </div>
-              </div>
-            </Link>
-            <Link
-              href="category/1"
-              className="relative block w-full group/link"
-            >
-              <div>
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="absolute top-0 left-0 text-xl w-0 opacity-0 group-hover/link:w-[10px] group-hover/link:opacity-100 text-yellow-500 mt-[2px] duration-300"
-                />
-                <div className="text-md text-gray-400 font-medium group-hover/link:pl-5 group-hover/link:text-gray-600 transition-all duration-300">
-                  Design (4)
-                </div>
-              </div>
-            </Link>
-            <Link
-              href="category/1"
-              className="relative block w-full group/link"
-            >
-              <div>
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="absolute top-0 left-0 text-xl w-0 opacity-0 group-hover/link:w-[10px] group-hover/link:opacity-100 text-yellow-500 mt-[2px] duration-300"
-                />
-                <div className="text-md text-gray-400 font-medium group-hover/link:pl-5 group-hover/link:text-gray-600 transition-all duration-300">
-                  Digital (4)
-                </div>
-              </div>
-            </Link>
-            <Link
-              href="category/1"
-              className="relative block w-full group/link"
-            >
-              <div>
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="absolute top-0 left-0 text-xl w-0 opacity-0 group-hover/link:w-[10px] group-hover/link:opacity-100 text-yellow-500 mt-[2px] duration-300"
-                />
-                <div className="text-md text-gray-400 font-medium group-hover/link:pl-5 group-hover/link:text-gray-600 transition-all duration-300">
-                  Ideals (4)
-                </div>
-              </div>
-            </Link>
-            <Link
-              href="category/1"
-              className="relative block w-full group/link"
-            >
-              <div>
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="absolute top-0 left-0 text-xl w-0 opacity-0 group-hover/link:w-[10px] group-hover/link:opacity-100 text-yellow-500 mt-[2px] duration-300"
-                />
-                <div className="text-md text-gray-400 font-medium group-hover/link:pl-5 group-hover/link:text-gray-600 transition-all duration-300">
-                  Technology (4)
-                </div>
-              </div>
-            </Link>
+              );
+            })}
           </div>
         </div>
         {/* end: Categories */}
