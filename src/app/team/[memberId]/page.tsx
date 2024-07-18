@@ -25,8 +25,8 @@ export default function MemberDetail() {
       <PageTitle title="team" memberName="Anna-Marry Scott" />
 
       <div className="container mx-auto flex justify-center my-20">
-        <div className="basis-9/12">
-          <div className="grid grid-cols-2 gap-20">
+        <div className="basis-full xl:basis-10/12 2xl:basis-9/12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16">
             <div>
               <div className="w-full pt-[100%] bg-[url('/assets/images/general/user-image.jpg')] bg-center bg-cover bg-no-repeat"></div>
             </div>
@@ -38,7 +38,7 @@ export default function MemberDetail() {
                     ui/ux Designer
                   </div>
 
-                  <div className="text-[2.5rem] leading-[2.7rem] font-bold mt-3">
+                  <div className="text-3xl md:text-[2.5rem] leading-[2.7rem] font-bold mt-3">
                     Anna-Marry Scott
                   </div>
                 </div>
@@ -154,22 +154,22 @@ export default function MemberDetail() {
                 {/* begin: career */}
                 <div>
                   <div className="text-[1.6rem] font-bold mb-4">Career</div>
-                  <div className="space-y-3">
-                    <div className="grid grid-cols-7">
-                      <div className="col-span-1 text-lg font-semibold">
+                  <div className="space-y-6 md:space-y-3">
+                    <div className="grid grid-cols-7 gap-2">
+                      <div className="col-span-full md:col-span-1 text-lg font-semibold">
                         2010
                       </div>
-                      <div className="col-span-6 text-sm leading-7 text-gray-600">
+                      <div className="col-span-full md:col-span-6 text-sm leading-7 text-gray-600">
                         Clients can assess the impact of their digital
                         investments through metrics like website traffic.
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-7">
-                      <div className="col-span-1 text-lg font-semibold">
+                    <div className="grid grid-cols-7 gap-2">
+                      <div className="col-span-full md:col-span-1 text-lg font-semibold">
                         2015
                       </div>
-                      <div className="col-span-6 text-sm leading-7 text-gray-600">
+                      <div className="col-span-full md:col-span-6 text-sm leading-7 text-gray-600">
                         This client-centric approach enables them to develop
                         tailored strategies that align with their clients’
                         objectives and deliver measurable results.

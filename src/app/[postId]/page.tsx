@@ -35,7 +35,6 @@ export default function PostDetail({ params }: any) {
       setNewsDetail(data);
     });
   }, [params.postId]);
-  console.log("🚀 ~ PostDetail ~ newsDetail:", newsDetail);
 
   const handleBack = () => {
     router.back();
@@ -43,7 +42,14 @@ export default function PostDetail({ params }: any) {
 
   return (
     <>
-      <div className="relative bg-[url('/assets/images/general/post-banner.jpg')] bg-center bg-cover bg-no-repeat w-full h-[420px] 2xl:h-[600px] ">
+      <div
+        className={`relative bg-center bg-cover bg-no-repeat w-full h-[420px] 2xl:h-[600px]`}
+        style={{
+          backgroundImage: `url(${getImgURLById(
+            newsDetail?.cover?.id
+          )})`
+        }}
+      >
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/50"></div>
 
         <div className="absolute right-0 left-0 bottom-0 z-[10]">
@@ -78,6 +84,13 @@ export default function PostDetail({ params }: any) {
           </div>
         </div>
       </div>
+      {/* <Image
+        className="relative w-full h-auto"
+        src={getImgURLById(newsDetail?.cover?.id, 300, 300)}
+        alt=""
+        width={300}
+        height={300}
+      ></Image> */}
 
       <div className="container mx-auto my-20 flex justify-center">
         <div className="basis-full xl:basis-10/12 2xl:basis-9/12">
@@ -214,12 +227,6 @@ export default function PostDetail({ params }: any) {
               </div> */}
               {/* begin: Augmented Reality (AR) Experiences */}
 
-              {/* <Image
-                src={getImgURLById(newsDetail.cover, 300, 300)}
-                alt=""
-                width={300}
-                height={300}
-              ></Image> */}
               <div dangerouslySetInnerHTML={{ __html: newsDetail.content }} />
 
               {/* begin: tags */}

@@ -33,9 +33,8 @@ export default function UserCard() {
         </Link>
         <div className="flex items-center gap-5">
           <Link
-            legacyBehavior
             href=""
-            className="opacity-0 group-hover/userCard:opacity-100 duration-500"
+            className="lg:opacity-0 group-hover/userCard:opacity-100 duration-500"
           >
             <div className="cursor-pointer">
               <FontAwesomeIcon
@@ -45,9 +44,8 @@ export default function UserCard() {
             </div>
           </Link>
           <Link
-            legacyBehavior
             href=""
-            className="opacity-0 group-hover/userCard:opacity-100 duration-500 delay-200"
+            className="lg:opacity-0 group-hover/userCard:opacity-100 duration-500 delay-200"
           >
             <div className="cursor-pointer">
               <FontAwesomeIcon
@@ -57,9 +55,8 @@ export default function UserCard() {
             </div>
           </Link>
           <Link
-            legacyBehavior
             href=""
-            className="opacity-0 group-hover/userCard:opacity-100 duration-500 delay-[400ms]"
+            className="lg:opacity-0 group-hover/userCard:opacity-100 duration-500 delay-[400ms]"
           >
             <div className="cursor-pointer">
               <FontAwesomeIcon
@@ -69,9 +66,8 @@ export default function UserCard() {
             </div>
           </Link>
           <Link
-            legacyBehavior
             href=""
-            className="opacity-0 group-hover/userCard:opacity-100 duration-500 delay-[600ms]"
+            className="lg:opacity-0 group-hover/userCard:opacity-100 duration-500 delay-[600ms]"
           >
             <div className="cursor-pointer">
               <FontAwesomeIcon

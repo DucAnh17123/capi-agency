@@ -12,7 +12,7 @@ export default function historyCard({ historyItems }: any) {
         return (
           <>
             {index % 2 === 0 ? (
-              <div className="group/historyCard w-full items-stretch grid grid-cols-12 md:divide-x-[1px] divide-black h-[510px] md:h-[580px] mb-[5rem] md:mb-0">
+              <div key={index} className="group/historyCard w-full items-stretch grid grid-cols-12 md:divide-x-[1px] divide-black h-[510px] md:h-[580px] mb-[5rem] md:mb-0">
                 <div className="col-span-9 md:col-span-6">
                   <div className="pr-6 lg:px-20">
                     <div className="relative">
@@ -52,7 +52,7 @@ export default function historyCard({ historyItems }: any) {
                 </div>
               </div>
             ) : (
-              <div className="group/historyCard w-full items-stretch grid grid-cols-12 md:divide-x-[1px] divide-black h-[510px] md:h-[580px] mb-[5rem] md:mb-0">
+              <div key={index} className="group/historyCard w-full items-stretch grid grid-cols-12 md:divide-x-[1px] divide-black h-[510px] md:h-[580px] mb-[5rem] md:mb-0">
                 <div className="col-span-9 md:col-span-6 order-2 md:order-1">
                   <div className="relative pr-6 lg:px-20 flex h-full items-center">
                     <div className="opacity-0 absolute top-[50%] right-0 translate-y-[-50%] group-hover/historyCard:translate-x-[-4px] w-0 h-0 border-[14px] border-r-yellow-500 border-y-transparent border-l-transparent md:group-hover/historyCard:opacity-100 duration-300"></div>

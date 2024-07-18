@@ -44,7 +44,9 @@ body {
 }
 
 /* End: btn */
-.swiper-button-prev {
+
+/* Begin: swiper user */
+.swiper-user .swiper-button-prev {
   color: gray !important;
   top: 20px !important;
   left: 92% !important;
@@ -52,7 +54,7 @@ body {
   z-index: 10;
 }
 
-.swiper-button-next {
+.swiper-user .swiper-button-next {
   color: gray !important;
   top: 50px !important;
   left: 92% !important;
@@ -61,40 +63,40 @@ body {
 }
 
 @media (min-width: 768px) {
-  .swiper-button-prev,
-  .swiper-button-next {
+  .swiper-user .swiper-button-prev,
+  .swiper-user .swiper-button-next {
     left: 95% !important;
   }
 }
 
 @media (min-width: 1024px) {
-  .swiper-button-prev,
-  .swiper-button-next {
+  .swiper-user .swiper-button-prev,
+  .swiper-user .swiper-button-next {
     left: 95% !important;
   }
 }
 
 @media (min-width: 1440px) {
-  .swiper-button-prev,
-  .swiper-button-next {
+  .swiper-user .swiper-button-prev,
+  .swiper-user .swiper-button-next {
     left: 95% !important;
     transform: rotate(90deg) scale(100%) !important;
   }
-  .swiper-button-next {
+  .swiper-user .swiper-button-next {
     top: 70px !important;
   }
 }
 
 @media (min-width: 2560px) {
-  .swiper-button-prev,
-  .swiper-button-next {
+  .swiper-user .swiper-button-prev,
+  .swiper-user .swiper-button-next {
     left: 90% !important;
     transform: rotate(90deg) scale(100%) !important;
   }
 }
 
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
+.swiper-user .swiper-button-prev:hover,
+.swiper-user .swiper-button-next:hover {
   color: #efad00 !important;
 }
 
@@ -107,6 +109,28 @@ body {
   height: 2px !important;
   transform: translateY(140px) !important;
 }
+/* End: swiper user */
+
+/* Begin: swiper project */
+.swiper-project .swiper-button-prev,
+.swiper-project .swiper-button-next {
+  color: snow !important;
+  transform: scale(0.5) !important;
+  font-weight: 900 !important;
+}
+
+@media (min-width: 768px) {
+  .swiper-project .swiper-button-prev {
+    margin-left: 20px !important;
+    transform: scale(0.7) !important;
+  }
+  .swiper-project .swiper-button-next {
+    margin-right: 20px !important;
+    transform: scale(0.7) !important;
+  }
+}
+
+/* End: swiper project */
 
 .title-detail {
   @apply text-2xl font-semibold text-gray-900 mb-5;

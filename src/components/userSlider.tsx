@@ -24,7 +24,7 @@ export default function UserSlider() {
                 slidesPerView="auto"
                 direction={"vertical"}
                 loop={true}
-                className="mySwiper relative w-full h-[400px]"
+                className="mySwiper swiper-user relative w-full h-[400px]"
                 modules={[Navigation, Mousewheel]}
                 speed={600}
                 navigation={{}}

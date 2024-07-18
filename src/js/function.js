@@ -1,17 +1,26 @@
 const DIRECTUS_FILE_API = "https://admin.capiagency.com/assets/";
-export const getImgURLById = (
-  id, width, height
-) => {
+export const getImgURLByIdWithSize = (id, width, height) => {
   if (id == null || id == undefined) {
-      return DIRECTUS_FILE_API + '6658e4a7-34f0-4fb0-a5fe-782f2defd819' + `/?width=${width}&height=${height}`
-
+    return (
+      DIRECTUS_FILE_API +
+      "6658e4a7-34f0-4fb0-a5fe-782f2defd819" +
+      `/?width=${width}&height=${height}`
+    );
   } else {
-      return (
-          DIRECTUS_FILE_API + id + `/?width=${width}&height=${height}`
-      );
-  };
-}
+    return DIRECTUS_FILE_API + id + `/?width=${width}&height=${height}`;
+  }
+};
 
+export const getImgURLById = (id) => {
+  if (id == null || id == undefined) {
+    return (
+      DIRECTUS_FILE_API +
+      "6658e4a7-34f0-4fb0-a5fe-782f2defd819"
+    );
+  } else {
+    return DIRECTUS_FILE_API + id;
+  }
+};
 
 // fetch data FAQS
 export const fetchFaqsData = async () => {
@@ -85,22 +94,18 @@ export const fetchInformationCompanyData = async () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        query: `
-            {
-                company_info {
-                    phones
-                    emails
-                    address
-                    working_hours
-                    portfolio
-                    facebook
-                    dribbble
-                    behance
-                }
+      body: `query {
+            company_info {
+                phones
+                emails
+                address
+                working_hours
+                portfolio
+                facebook
+                dribbble
+                behance
             }
-        `,
-      }),
+        }`,
     });
 
     const res = await response.json();
@@ -206,7 +211,9 @@ export const fetchNewsListByCategory = async (slug) => {
               }
             }) {
                 slug
-                cover
+                cover {
+                  id
+                }
                 title
                 blurb
             }

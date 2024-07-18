@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -30,24 +31,49 @@ import Comments from "@/components/comments";
 
 export default function PortfolioDetail() {
   const router = useRouter();
+  const [isZoom, setIsZoom] = useState(false);
 
   const handleBack = () => {
     router.back();
+  };
+
+  const toggleFullScreen = () => {
+    const element = document.getElementsByClassName("slideImage");
+    console.log("🚀 ~ toggleFullScreen ~ element:", element);
+
+    const isFullScreen = document.fullscreenElement;
+    if (isFullScreen) {
+      document.exitFullscreen();
+    } else {
+      // element.requestFullscreen();
+    }
+  };
+
+  const toggleZoomImage = () => {
+    // const elements = document.getElementsByClassName("slideImage") ;
+
+    // setIsZoom(!isZoom);
+    // if (isZoom) {
+    //   Array.from(elements).forEach(element => {
+    //     element.style.transform = 'scale(1.5)';
+    //     element.style.transition = 'transform 0.3s ease';
+    //   });
+    // }
   };
 
   return (
     <div>
       <PageTitle title="Portfolio" subTitle="PYLON LIFE" />
 
-      <div className="container mx-auto space-y-20 mb-24">
+      <div className="container mx-auto space-y-20 my-24">
         {/* Begin: info Project*/}
         <div className="flex w-full justify-center">
-          <div className="basis-9/12 space-y-10">
-            <div className="text-6xl font-bold tracking-tighter">
+          <div className="basis-full xl:basis-10/12 2xl:basis-9/12 space-y-10">
+            <div className="text-4xl xl:text-6xl font-bold tracking-tighter">
               Pylon Life
             </div>
-            <div className="grid grid-cols-2">
-              <div className="col-span-1 pr-28">
+            <div className="grid gird-cols-1 md:grid-cols-2 gap-10">
+              <div className="col-span-1 xl:pr-28">
                 <div className="text-gray-700 font-medium text-lg">
                   Company branding goes beyond just a logo; it encompasses the
                   values, personality, and promise that a business conveys to
@@ -87,13 +113,13 @@ export default function PortfolioDetail() {
 
         {/* Begin: Description & Defining */}
         <div className="flex w-full justify-center">
-          <div className="basis-9/12 grid grid-cols-12 gap-8">
-            <div className="col-span-4">
+          <div className="basis-full xl:basis-10/12 2xl:basis-9/12 grid grid-cols-12 gap-8">
+            <div className="col-span-full lg:col-span-4">
               <div className="text-[1.7rem] font-bold tracking-tight">
                 Description & Defining
               </div>
             </div>
-            <div className="col-span-8">
+            <div className="col-span-full lg:col-span-8">
               <div className="text-sm leading-7 text-gray-600 text-justify space-y-3">
                 <div className="first-letter:text-black first-letter:text-4xl first-letter:font-semibold first-letter:mr-3 first-letter:float-left">
                   Before embarking on any branding efforts, it’s essential to
@@ -128,7 +154,20 @@ export default function PortfolioDetail() {
         <div className="">
           <Swiper
             direction={"horizontal"}
-            slidesPerView={3}
+            breakpoints={{
+              425: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 2,
+              },
+              1440: {
+                slidesPerView: 3,
+              },
+            }}
             spaceBetween={30}
             className="mySwiper"
             loop={true}
@@ -161,7 +200,11 @@ export default function PortfolioDetail() {
             </SwiperSlide>
           </Swiper>
 
-          <input type="checkbox" id="imageModal" className="peer fixed appearance-none opacity-0" />
+          <input
+            type="checkbox"
+            id="imageModal"
+            className="peer fixed appearance-none opacity-0"
+          />
           <label
             htmlFor="imageModal"
             className="fixed z-[60] inset-0 pointer-events-none invisible opacity-0 bg-black/75 peer-checked:pointer-events-auto peer-checked:visible peer-checked:opacity-100 transition-all duration-500"
@@ -172,10 +215,12 @@ export default function PortfolioDetail() {
                 className="absolute top-0 right-0 w-[200px] h-[100px] justify-between py-6 px-6 flex text-white"
               >
                 <FontAwesomeIcon
+                  onClick={toggleFullScreen}
                   className="text-lg p-1 text-gray-200 hover:text-white cursor-pointer"
                   icon={faCropSimple}
                 />
                 <FontAwesomeIcon
+                  onClick={toggleZoomImage}
                   className="text-lg p-1 text-gray-200 hover:text-white cursor-pointer"
                   icon={faMagnifyingGlassPlus}
                 />
@@ -192,39 +237,64 @@ export default function PortfolioDetail() {
               </label>
 
               <div className="w-[100%] h-[350px] flex items-center justify-center">
-                  <Swiper
-                    direction={"horizontal"}
-                    slidesPerView={1}
-                    spaceBetween={300}
-                    className="mySwiper w-full h-full"
-                    loop={true}
-                    navigation={true}
-                    modules={[Navigation]}
-                    speed={500}
-                  >
-                    <SwiperSlide className="relative h-full w-full">
-                      <label htmlFor="" className="absolute top-1/2 left-1/2 w-[500px] h-fit translate-x-[-50%] translate-y-[-50%] cursor-pointer">
-                         <div className="bg-[url('/assets/images/general/Pylon-banner.png')] bg-center bg-cover bg-no-repeat w-[500px] pt-[70%]"></div>
-                      </label>
-                    </SwiperSlide>
-                    <SwiperSlide className="relative h-full w-full">
-                      <label htmlFor="" className="absolute top-1/2 left-1/2 w-[500px] h-fit translate-x-[-50%] translate-y-[-50%] cursor-pointer">
-                         <div className="bg-[url('/assets/images/general/Pylon-banner.png')] bg-center bg-cover bg-no-repeat w-[500px] pt-[70%]"></div>
-                      </label>
-                    </SwiperSlide>
-                    <SwiperSlide className="relative h-full w-full">
-                      <label htmlFor="" className="absolute top-1/2 left-1/2 w-[500px] h-fit translate-x-[-50%] translate-y-[-50%] cursor-pointer">
-                         <div className="bg-[url('/assets/images/general/Pylon-banner.png')] bg-center bg-cover bg-no-repeat w-[500px] pt-[70%]"></div>
-                      </label>
-                    </SwiperSlide>
-                    <SwiperSlide className="relative h-full w-full">
-                      <label htmlFor="" className="absolute top-1/2 left-1/2 w-[500px] h-fit translate-x-[-50%] translate-y-[-50%] cursor-pointer">
-                         <div className="bg-[url('/assets/images/general/Pylon-banner.png')] bg-center bg-cover bg-no-repeat w-[500px] pt-[70%]"></div>
-                      </label>
-                    </SwiperSlide>
-                    
-                  </Swiper>
-              </div>  
+                <Swiper
+                  direction={"horizontal"}
+                  slidesPerView={1}
+                  spaceBetween={200}
+                  speed={300}
+                  breakpoints={{
+                    425: {
+                      spaceBetween: 200,
+                    },
+                    768: {
+                      spaceBetween: 200,
+                    },
+                    1024: {
+                      spaceBetween: 200,
+                    },
+                    1440: {
+                      spaceBetween: 300,
+                    },
+                  }}
+                  className="mySwiper swiper-project w-full h-full cursor-grab"
+                  loop={true}
+                  navigation={true}
+                  modules={[Navigation]}
+                >
+                  <SwiperSlide className="relative h-full w-full">
+                    <label
+                      htmlFor=""
+                      className="slideImage absolute top-1/2 left-1/2 w-[500px] h-fit translate-x-[-50%] translate-y-[-50%] cursor-grab"
+                    >
+                      <div className="bg-[url('/assets/images/general/Pylon-banner.png')] bg-center bg-cover bg-no-repeat w-[500px] pt-[70%]"></div>
+                    </label>
+                  </SwiperSlide>
+                  <SwiperSlide className="relative h-full w-full">
+                    <label
+                      htmlFor=""
+                      className="slideImage absolute top-1/2 left-1/2 w-[500px] h-fit translate-x-[-50%] translate-y-[-50%] cursor-grab"
+                    >
+                      <div className="bg-[url('/assets/images/general/Pylon-banner.png')] bg-center bg-cover bg-no-repeat w-[500px] pt-[70%]"></div>
+                    </label>
+                  </SwiperSlide>
+                  <SwiperSlide className="relative h-full w-full">
+                    <label
+                      htmlFor=""
+                      className="slideImage absolute top-1/2 left-1/2 w-[500px] h-fit translate-x-[-50%] translate-y-[-50%] cursor-grab"
+                    >
+                      <div className="bg-[url('/assets/images/general/Pylon-banner.png')] bg-center bg-cover bg-no-repeat w-[500px] pt-[70%]"></div>
+                    </label>
+                  </SwiperSlide>
+                  <SwiperSlide className="relative h-full w-full">
+                    <label
+                      htmlFor=""
+                      className="slideImage absolute top-1/2 left-1/2 w-[500px] h-fit translate-x-[-50%] translate-y-[-50%] cursor-grab"
+                    >
+                      <div className="bg-[url('/assets/images/general/Pylon-banner.png')] bg-center bg-cover bg-no-repeat w-[500px] pt-[70%]"></div>
+                    </label>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
             </div>
           </label>
         </div>
@@ -232,13 +302,13 @@ export default function PortfolioDetail() {
 
         {/* Begin: Challenge & Solution */}
         <div className="flex w-full justify-center">
-          <div className="basis-9/12 grid grid-cols-12 gap-8">
-            <div className="col-span-4">
+          <div className="basis-full xl:basis-10/12 2xl:basis-9/12 grid grid-cols-12 gap-8">
+            <div className="col-span-full lg:col-span-4">
               <div className="text-[1.7rem] font-bold tracking-tight">
                 Challenge & Solution
               </div>
             </div>
-            <div className="col-span-8">
+            <div className="col-span-full lg:col-span-8">
               <div className="text-sm leading-7 text-gray-600 text-justify space-y-3">
                 <div>
                   Consistency is key to successful branding. Ensure that your
@@ -276,11 +346,11 @@ export default function PortfolioDetail() {
         {/* End: Challenge & Solution */}
 
         <div className="flex w-full justify-center">
-          <div className="basis-9/12">
+          <div className="basis-full xl:basis-10/12 2xl:basis-9/12">
             {/* Begin: tag */}
             <div className="space-y-9">
-              <div className="flex justify-between">
-                <div className="flex justify-between gap-2">
+              <div className="flex flex-col md:flex-row justify-between gap-6">
+                <div className="flex justify-center md:justify-between gap-2">
                   <Link href="" className="block">
                     <div className="py-1 px-3 border-[1px] border-black rounded-full text-black text-xs font-semibold hover:text-white hover:bg-black transition-colors duration-300">
                       branding
@@ -298,7 +368,7 @@ export default function PortfolioDetail() {
                   </Link>
                 </div>
 
-                <div className="flex items-center gap-5">
+                <div className="flex justify-center items-center gap-5">
                   <Link href="">
                     <div>
                       <FontAwesomeIcon
@@ -342,7 +412,7 @@ export default function PortfolioDetail() {
                     </div>
                   </button>
 
-                  <div className="text-lg font-semibold group-hover:underline">
+                  <div className="hidden lg:block text-lg font-semibold group-hover:underline">
                     Navigating the Digital Landscape
                   </div>
                 </div>
@@ -361,7 +431,7 @@ export default function PortfolioDetail() {
                     </div>
                   </button>
 
-                  <div className="text-lg font-semibold group-hover:underline">
+                  <div className="hidden lg:block text-lg font-semibold group-hover:underline">
                     Exploring UI/UX Trends 2024
                   </div>
                 </div>
@@ -373,9 +443,9 @@ export default function PortfolioDetail() {
 
         {/* Begin: related projects */}
         <div className="flex w-full justify-center">
-          <div className="basis-9/12">
-            <div className="text-3xl font-bold mb-8">Related Posts</div>
-            <div className="grid grid-cols-3 gap-10">
+          <div className="basis-full xl:basis-10/12 2xl:basis-9/12">
+            <div className="text-3xl font-bold mb-8">Related Projects</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-[1.5rem] lg:gap-[2rem] xl:gap-8">
               <ProductCard isFixHeight={false} />
               <ProductCard isFixHeight={false} />
               <ProductCard isFixHeight={false} />
@@ -386,7 +456,7 @@ export default function PortfolioDetail() {
 
         {/* Begin: comments */}
         <div className="flex w-full justify-center">
-          <div className="basis-9/12">
+          <div className="basis-full xl:basis-10/12 2xl:basis-9/12">
             <Comments />
           </div>
         </div>
