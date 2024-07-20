@@ -1,14 +1,62 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper stylesimport 'swiper/css/scrollbar';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+
 export default function Footer() {
   return (
     <footer className="relative w-full min-h-[500px] bg-black overflow-hidden select-none">
-      <div className="absolute top-0 bottom-[-20%] left-0 translate-y-[0] z-10">
-        <div className="text-white text-[35rem] font-bold text-nowrap leading-[40rem] inline-block animate-marquee">
-        capi agency 
+      <div className="absolute top-0 bottom-[-20%] left-[0] z-10 animate-fake">
+        <div className="text-white text-[35rem] font-bold text-nowrap leading-[40rem] inline-block ">
+        capi agency
         </div>
       </div>
+
+
+      {/* <div className="absolute top-0 bottom-0 left-0 right-0 z-10">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper relative h-full w-full"
+          speed={10000}
+          loop={true}
+        >
+          <SwiperSlide className="absolute top-0 bottom-[-20%] left-0 right-0 w-full">
+            <div className="text-white text-[35rem] font-bold text-nowrap leading-[40rem] inline-block ">
+              capi agency
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="absolute top-0 bottom-[-20%] left-0 right-0 w-full">
+            <div className="text-white text-[35rem] font-bold text-nowrap leading-[40rem] inline-block ">
+              capi agency
+            </div>
+          </SwiperSlide>
+        </Swiper>
+         
+      </div> */}
+     
+      
       <div className="absolute top-0 left-0 bottom-0 right-0 bg-black/85 z-20">
         <div className="container mx-auto py-20">
           <div className="flex items-center gap-3">

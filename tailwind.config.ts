@@ -25,13 +25,22 @@ const config: Config = {
         },
         marquee: {
           "100%": {
-            transform: "translate(-100%, 0)"
+            transform: "translate(-100%, 0)",
+          },
+        },
+        fake: {
+          "0%": {
+            transform: "translate(0%, 0)",
+          },
+          "100%": {
+            transform: "translate(-100%, 0)",
           },
         },
       },
       animation: {
         fadeIn: "fadeIn 2s ease-in-out forwards",
-        marquee: "marquee 60s linear infinite"
+        marquee: "marquee 10s linear 8s infinite",
+        fake: "fake 10s linear infinite",
       },
     },
   },
