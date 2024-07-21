@@ -4,13 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
   faShapes,
   faChevronDown,
   faXmark,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 const containerStyle = {
@@ -25,35 +25,52 @@ const center = {
 
 export default function Header() {
   const [searchModal, setSearchModal] = useState(false);
-  const [sideBar, setSideBar] = useState(false);
+  const [sideBarRight, setSideBarRight] = useState(false);
+  const [sideBarLeft, setSideBarLeft] = useState(false);
 
   function handleSearchModal() {
     setSearchModal(!searchModal);
   }
 
-  function handleSideBar() {
-    setSideBar(!sideBar);
+  function handleSideBarRight() {
+    setSideBarRight(!sideBarRight);
+  }
+  function handleSideBarLeft() {
+    setSideBarLeft(!sideBarLeft);
   }
 
   return (
-    <header className="fixed top-0 left-0 w-full header-height z-[100] bg-black">
+    <header className="fixed top-0 left-0 w-full h-[60px] xl:h-[100px] z-40 bg-[#232323] xl:bg-black">
       <div className="relative h-full">
         <div className="container mx-auto h-full">
           <div className="flex justify-between items-center h-full">
-            <div className="w-[134px]">
+            <div
+              className="block xl:hidden cursor-pointer"
+              onClick={handleSideBarLeft}
+            >
+              <FontAwesomeIcon
+                className="text-white text-2xl xl:text-xl"
+                icon={faBars}
+              />
+            </div>
+
+            <div className="w-[134px] scale-75 xl:scale-100 origin-center">
               <Link href="/">
-                <Image
-                  src={"/assets/images/general/capi-logo.svg"}
-                  className=""
-                  alt="image"
-                  width={80}
-                  height={50}
-                  layout="responsive"
-                ></Image>
+                <div>
+                  <Image
+                    src={"/assets/images/general/capi-logo.svg"}
+                    className=""
+                    alt="image"
+                    width={80}
+                    height={50}
+                    layout="responsive"
+                  ></Image>
+                </div>
               </Link>
             </div>
-            <div>
-              <ul className="flex gap-2 border-[1px] border-white rounded-full py-1 px-1">
+
+            <div className="hidden xl:block">
+              <ul className="relative flex gap-2 border-[1px] border-white rounded-full py-1 px-1">
                 <li>
                   <Link className="block" href="/" legacyBehavior>
                     <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
@@ -66,6 +83,7 @@ export default function Header() {
                     </div>
                   </Link>
                 </li>
+
                 <li>
                   <Link className="block" href="/services" legacyBehavior>
                     <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
@@ -79,7 +97,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="block" href="/works" legacyBehavior>
+                  <Link className="block" href="/our-portfolio" legacyBehavior>
                     <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
@@ -106,9 +124,13 @@ export default function Header() {
                       </div>
                       <div className="absolute top-0 left-0 w-0 h-full bg-white group-hover/link:w-full rounded-full duration-300"></div>
 
-                      <div className="absolute top-[130%] translate-x-[-50%] left-1/2 w-[1250px] h-auto rounded-3xl bg-white opacity-0 translate-y-4 group-hover/link:opacity-100 group-hover/link:translate-y-0 duration-500 after:absolute after:top-[-15px] after:left-0 after:w-full after:h-[25px]">
+                      <div className="absolute top-[130%] translate-x-[-50%] left-1/2 w-[1250px] h-auto rounded-3xl bg-white opacity-0 translate-y-4 group-hover/link:opacity-100 group-hover/link:translate-y-0 duration-500 after:absolute after:top-[-15px] after:left-0 after:w-full after:h-[25px] shadow-md">
                         <div className="flex w-full h-full divide-x-[1px] divide-black rounded-3xl overflow-hidden">
-                          <Link href="/our-history" legacyBehavior className="block">
+                          <Link
+                            href="/our-history"
+                            legacyBehavior
+                            className="block"
+                          >
                             <div className="cursor-pointer flex-1 py-14 px-10 text-center flex flex-col justify-center hover:bg-gray-100">
                               <div>
                                 <FontAwesomeIcon
@@ -125,7 +147,11 @@ export default function Header() {
                             </div>
                           </Link>
 
-                          <Link href="our-mission" legacyBehavior className="block">
+                          <Link
+                            href="our-mission"
+                            legacyBehavior
+                            className="block"
+                          >
                             <div className="flex-1 py-14 px-10 text-center flex flex-col justify-center hover:bg-gray-100">
                               <div>
                                 <FontAwesomeIcon
@@ -143,7 +169,11 @@ export default function Header() {
                             </div>
                           </Link>
 
-                          <Link href="/our-team" legacyBehavior className="block">
+                          <Link
+                            href="/our-team"
+                            legacyBehavior
+                            className="block"
+                          >
                             <div className="flex-1 py-14 px-10 text-center flex flex-col justify-center hover:bg-gray-100">
                               <div>
                                 <FontAwesomeIcon
@@ -166,7 +196,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="block" href="" legacyBehavior>
+                  <Link className="block" href="/news" legacyBehavior>
                     <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
@@ -178,7 +208,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="block" href="" legacyBehavior>
+                  <Link className="block" href="/faq">
                     <div className="cursor-pointer group/link relative text-xs font-semibold rounded-full py-3 px-4 overflow-hidden">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
@@ -190,7 +220,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="block" href="" legacyBehavior>
+                  <Link className="block" href="/contacts" legacyBehavior>
                     <div className="cursor-pointer group/link relative block text-xs font-semibold rounded-full py-3 px-3 overflow-hidden hover:overflow-visible duration-500">
                       <div>
                         <span className="relative text-white group-hover/link:text-black z-10 duration-300">
@@ -199,7 +229,7 @@ export default function Header() {
                       </div>
                       <div className="absolute top-0 left-0 w-0 h-full bg-white group-hover/link:w-full rounded-full duration-300"></div>
 
-                      <div className="absolute top-[130%] left-0 translate-x-[-70%] w-[1100px] h-auto rounded-3xl cursor-default bg-gray-200 translate-y-4 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-y-0 duration-500 after:absolute after:top-[-15px] after:left-0 after:w-full after:h-[25px]">
+                      <div className="absolute top-[130%] left-0 translate-x-[-70%] w-[1100px] h-auto rounded-3xl cursor-default bg-[#e1e1e1] translate-y-4 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-y-0 duration-500 after:absolute after:top-[-15px] after:left-0 after:w-full after:h-[25px]">
                         <div className="grid grid-cols-3 w-full h-full rounded-3xl overflow-hidden py-12 px-10 gap-8">
                           <div className="col-span-1">
                             <h2 className="font-semibold text-xl mb-6">
@@ -208,18 +238,20 @@ export default function Header() {
                             <div className="space-y-3 *:text-md *:font-medium">
                               <div className="hover:underline hover:underline-offset-4">
                                 <Link href="" legacyBehavior>
-                                  +84 392 293 045
+                                  <div>+84 392 293 045</div>
                                 </Link>
                               </div>
                               <div className="hover:underline hover:underline-offset-4">
                                 <Link href="" legacyBehavior>
-                                  35 To Vinh Dien str, Thanh Xuan, Hanoi,
-                                  Vietnam
+                                  <div>
+                                    35 To Vinh Dien str, Thanh Xuan, Hanoi,
+                                    Vietnam
+                                  </div>
                                 </Link>
                               </div>
                               <div className="hover:underline hover:underline-offset-4">
                                 <Link href="" legacyBehavior>
-                                  agency@capi.design
+                                  <div>agency@capi.design</div>
                                 </Link>
                               </div>
                             </div>
@@ -237,16 +269,16 @@ export default function Header() {
                               <input
                                 type="text"
                                 placeholder="Your Name"
-                                className="bg-gray-200 w-full pr-4 py-2 border-b-[1px] border-gray-700 outline-none font-medium placeholder:text-black placeholder:font-medium focus:placeholder:text-transparent"
+                                className="bg-[#e1e1e1] w-full pr-4 py-2 border-b-[1px] border-gray-700 outline-none font-medium placeholder:text-black placeholder:font-medium focus:placeholder:text-transparent"
                               />
                               <input
                                 type="email"
                                 placeholder="Your Email"
-                                className="bg-gray-200 w-full pr-4 py-2 border-b-[1px] border-gray-700 outline-none font-medium placeholder:text-black placeholder:font-medium focus:placeholder:text-transparent"
+                                className="bg-[#e1e1e1] w-full pr-4 py-2 border-b-[1px] border-gray-700 outline-none font-medium placeholder:text-black placeholder:font-medium focus:placeholder:text-transparent"
                               />
                               <textarea
                                 placeholder="Tell us about your ideas"
-                                className="bg-gray-200 w-full h-pull pr-4 py-2 border-b-[1px] border-gray-700 outline-none font-medium placeholder:text-black placeholder:font-medium focus:placeholder:text-transparent"
+                                className="bg-[#e1e1e1] w-full h-pull pr-4 py-2 border-b-[1px] border-gray-700 outline-none font-medium placeholder:text-black placeholder:font-medium focus:placeholder:text-transparent"
                               ></textarea>
                               <button className="group/btnSend py-3 px-4 bg-black rounded-full text-white text-xs uppercase flex items-center gap-2 mt-10 hover:bg-[#e44f39] transition-colors duration-700 ease-in-out">
                                 send
@@ -272,13 +304,20 @@ export default function Header() {
                 </li>
               </ul>
             </div>
+
             <div className="flex gap-6 items-center">
-              <div className="relative w-6">
+              <div
+                className={
+                  searchModal
+                    ? "relative w-6 overflow-visible"
+                    : "relative w-6 overflow-hidden"
+                }
+              >
                 {searchModal === false && (
                   <div onClick={handleSearchModal}>
                     <FontAwesomeIcon
                       icon={faMagnifyingGlass}
-                      className="text-white text-xl cursor-pointer"
+                      className={`text-white text-2xl xl:text-xl cursor-pointer`}
                     />
                   </div>
                 )}
@@ -312,9 +351,10 @@ export default function Header() {
                   </div>
                 </div>
               </div>
+
               <div
-                className="group/sideBar flex items-center justify-center bg-[#efad00] w-[55px] h-[55px] rounded-full cursor-pointer"
-                onClick={handleSideBar}
+                className="group/sideBar hidden xl:flex items-center justify-center bg-[#efad00] w-[55px] h-[55px] rounded-full cursor-pointer"
+                onClick={handleSideBarRight}
               >
                 <div className="relative group/sideBar w-1/4 h-1/4 translate-x-[-10%] translate-y-[-10%]">
                   <div className="absolute top-0 left-0 group-hover/sideBar:top-1/2 group-hover/sideBar:left-0 transition-all duration-700 ease-in-out bg-white w-[4px] h-[4px] rounded-full"></div>
@@ -332,10 +372,140 @@ export default function Header() {
           </div>
         </div>
 
-        {/* begin: sideBar */}
+        {/* begin: sideBar left */}
         <div
           className={
-            sideBar
+            sideBarLeft
+              ? "absolute top-0 left-0 min-h-screen max-w-screen-lg bg-[#232323] px-8 py-12 opacity-100 translate-x-0 duration-700"
+              : "absolute top-0 left-0 min-h-screen max-w-screen-lg bg-[#232323] px-8 py-12 opacity-0 translate-x-[-150%] duration-700"
+          }
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="relative w-full">
+            <div className="absolute top-0 right-[0] translate-x-[350%] translate-y-[-100%]">
+              <FontAwesomeIcon
+                icon={faXmark}
+                className="text-yellow-500 text-2xl cursor-pointer"
+                onClick={handleSideBarLeft}
+              />
+            </div>
+
+            <div className="space-y-10 text-white">
+              {/* Begin: sideBar search */}
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="outline-none w-full py-3 pl-8 text-smd text-white border-b-[1px] bg-[#232323] border-white/70 placeholder:text-white focus:placeholder:text-transparent"
+                />
+                <div className="absolute top-[50%] translate-y-[-50%]">
+                  <FontAwesomeIcon
+                    icon={faMagnifyingGlass}
+                    className="text-yellow-500 text-lg"
+                  />
+                </div>
+              </div>
+              {/* End: sideBar search */}
+
+              {/* Begin: sideBar navigation */}
+              <div>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/">
+                      <div className="text-sm text-white font-semibold focus:text-yellow-500">
+                        Home
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services">
+                      <div className="text-sm text-white font-semibold">
+                        Services
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/our-portfolio">
+                      <div className="text-sm text-white font-semibold">
+                        Works
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <div className="relative">
+                      <input type="checkbox" id="aboutUs" className="peer absolute top-0 left-0 right-0 h-[24px] appearance-none opacity-0 z-10" />
+
+                      <label
+                        htmlFor="aboutUs"
+                        className="text-sm text-white font-semibold"
+                      >
+                        About Us
+                      </label>
+
+                      <div className="absolute top-0 right-0 -rotate-90 peer-checked:rotate-0 peer-checked:text-yellow-500 transition-all duration-700">
+                        <FontAwesomeIcon icon={faChevronDown} />
+                      </div>
+
+                      <label htmlFor="aboutUs" className="block max-h-0 pointer-events-none peer-checked:max-h-[300px] origin-top peer-checked:pointer-events-auto duration-700 overflow-hidden">
+                        <ul className="space-y-4 ml-4 mt-4">
+                          <li>
+                            <Link href="/our-mission">
+                              <div className="text-sm text-white font-semibold">
+                                Our Mission
+                              </div>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/our-history">
+                              <div className="text-sm text-white font-semibold">
+                                Our History
+                              </div>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/our-team">
+                              <div className="text-sm text-white font-semibold">
+                                Our Team
+                              </div>
+                            </Link>
+                          </li>
+                        </ul>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <Link href="/news">
+                      <div className="text-sm text-white font-semibold">
+                        News
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/faq">
+                      <div className="text-sm text-white font-semibold">
+                        FAQ
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contacts">
+                      <div className="text-sm text-white font-semibold">
+                        Contacts
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              {/* End: sideBar navigation */}
+            </div>
+          </div>
+        </div>
+        {/* end: sideBar left */}
+
+        {/* begin: sideBar right */}
+        <div
+          className={
+            sideBarRight
               ? "absolute top-0 right-0 min-h-screen w-[430px] bg-black px-14 py-20 opacity-100 translate-x-0 duration-700"
               : "absolute top-0 right-0 min-h-screen w-[430px] bg-black px-14 py-20 opacity-0 translate-x-[150%] duration-700"
           }
@@ -345,8 +515,8 @@ export default function Header() {
             <div className="absolute top-[-5%] left-[-30%]">
               <FontAwesomeIcon
                 icon={faXmark}
-                className="text-yellow-500 text-2xl cursor-pointer"
-                onClick={handleSideBar}
+                className="text-yellow-500 text-2xl cursor-pointer p-2"
+                onClick={handleSideBarRight}
               />
             </div>
 
@@ -420,7 +590,7 @@ export default function Header() {
             </div>
           </div>
         </div>
-        {/* end: sideBar */}
+        {/* end: sideBar right */}
       </div>
     </header>
   );

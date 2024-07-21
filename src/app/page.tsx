@@ -1,15 +1,12 @@
 import Image from "next/image";
-import Banner from "@/components/banner";
+import HomeBanner from "@/components/homeBanner";
 import Process from "@/components/process";
 import UserSlider from "@/components/userSlider";
-import News from "@/components/news";
 import Services from "@/components/services";
 import ProductCard from "@/components/productCard";
 import ListPage from "@/components/pageList";
-
+import NewsCard from "@/components/newsCard";
 import Link from "next/link";
-
-import AnimatedCursor from "react-animated-cursor";
 
 export default function Home() {
   const serviceItems = [
@@ -42,15 +39,15 @@ export default function Home() {
 
   return (
     <>
-      <Banner />
+      <HomeBanner />
 
       {/* begin: about capi agency */}
-      <div className="container mx-auto mt-[9.5rem]">
+      <div className="container mx-auto mt-20 xl:mt-[9.5rem]">
         <div className="flex flex-col justify-center items-center text-center">
           <div className="uppercase text-sm font-semibold text-gray-500">
             (VỀ CAPI AGENCY)
           </div>
-          <div className="text-7xl leading-[5rem] font-semibold px-28">
+          <div className="text-3xl md:text-6xl md:leading-[4.5rem] lg:text-7xl 2xl:text-[5rem] xl:leading-[5.5rem] font-semibold xl:px-28 tracking-tight">
             Đơn vị tiên phong trong{" "}
             <span className="text-green-500">đo lường</span>,{" "}
             <span className="text-yellow-500">phân tích</span> và định hướng{" "}
@@ -66,57 +63,38 @@ export default function Home() {
       {/* end: about capi agency */}
 
       {/* begin: product list */}
+      {/* <div className="flex mt-[9.5rem] px-4 flex-wrap xl:flex-nowrap">
+          <div className="basis-full md:basis-1/2 xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+            <ProductCard isFixHeight={true} />
+          </div>
 
-      {/* <div>
-        <AnimatedCursor
-            innerSize={20}
-            outerSize={8}
-            color="0, 0, 0"
-            outerAlpha={0.3}
-            innerScale={0.7}
-            outerScale={12}
-            clickables={[
-              "a",
-              'input[type="text"]',
-              'input[type="email"]',
-              'input[type="number"]',
-              'input[type="submit"]',
-              'input[type="image"]',
-              "label[for]",
-              "select",
-              "textarea",
-              "button",
-              ".link",
-              {
-                target: ".custom",
-                // options: {
-                //   innerSize: 12,
-                //   outerSize: 12,
-                //   color: "255, 255, 255",
-                //   outerAlpha: 0.3,
-                //   innerScale: 0.7,
-                //   outerScale: 5,
-                // },
-              },
-            ]}
-          />
-      </div> */}
+          <div className="basis-full md:basis-1/2 xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+            <ProductCard isFixHeight={true} />
+          </div>
 
-      <div className="flex justify-between gap-4 mt-[9.5rem] px-4">
-        <div className="flex-1 hover:flex-[3] transition-all duration-[400ms] ease-in">
-          <ProductCard />
+          <div className="basis-full md:basis-1/2 xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+            <ProductCard isFixHeight={true} />
+          </div>
+
+          <div className="basis-full md:basis-1/2 xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+            <ProductCard isFixHeight={true} />
+          </div>
+        </div> */}
+      <div className="flex gap-4 mt-20 xl:mt-[9.5rem] px-4 flex-wrap xl:flex-nowrap">
+        <div className="basis-full xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+          <ProductCard isFixHeight={true} />
         </div>
 
-        <div className="flex-1 hover:flex-[3] transition-all duration-[400ms] ease-in">
-          <ProductCard />
+        <div className="basis-full xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+          <ProductCard isFixHeight={true} />
         </div>
 
-        <div className="flex-1 hover:flex-[3] transition-all duration-[400ms] ease-in">
-          <ProductCard />
+        <div className="basis-full xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+          <ProductCard isFixHeight={true} />
         </div>
 
-        <div className="flex-1 hover:flex-[3] transition-all duration-[400ms] ease-in">
-          <ProductCard />
+        <div className="basis-full xl:basis-1/4 xl:hover:basis-3/4 transition-all duration-300 ease-in">
+          <ProductCard isFixHeight={true} />
         </div>
       </div>
 
@@ -130,13 +108,45 @@ export default function Home() {
       />
       {/* begin: services */}
 
-      <Process
-        title="QUY TRÌNH TRIỂN KHAI"
-        subTitle="(TỐC ĐỘ VÀ CHẤT LƯỢNG VƯỢT TRỘI)"
-        btnText="tất cả quy trình"
-      />
+      <div className="py-20 w-full">
+        <Process
+          title="QUY TRÌNH TRIỂN KHAI"
+          subTitle="(TỐC ĐỘ VÀ CHẤT LƯỢNG VƯỢT TRỘI)"
+          btnText="tất cả quy trình"
+          backgroundColor="#fff"
+          textColor="#000"
+        />
+      </div>
       <UserSlider />
-      <News />
+
+      {/* begin: news */}
+      <div className="my-20 container mx-auto ">
+        <div className="w-full h-[40px] relative">
+          <div className="absolute top-0 left-0 translate-x-[-50%] border-[20px] w-0 h-0 border-t-yellow-500 border-x-transparent border-b-transparent rotate-45"></div>
+        </div>
+        <div className="flex flex-col md:flex-row space-y-4 items-start lg:items-center justify-between pb-6">
+          <div>
+            <div className="text-sm text-gray-400 uppercase my-2">
+              (HOW IT WORKINGS)
+            </div>
+            <div className="text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold uppercase lg:mt-4">
+              Our Latest News
+            </div>
+          </div>
+          <button className="group/btn btn-primary mt-10 flex items-center gap-3">
+            View all news
+            <div className="group-hover/btn:scale-125 group-hover/btn:bg-white w-2 h-2 rounded-full bg-black transition-all duration-700"></div>
+          </button>
+        </div>
+
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-[1.5rem] lg:gap-[2rem] xl:gap-8">
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+        </div>
+      </div>
+      {/* end: news */}
 
       {/* begin: next page */}
 

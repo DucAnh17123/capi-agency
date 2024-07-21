@@ -9,15 +9,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // container: {
-      //   padding: {
-      //     DEFAULT: '1rem',
-      //     sm: '2rem',
-      //     lg: '4rem',
-      //     xl: '5rem',
-      //     '2xl': '6rem',
-      //   },
-      // },
+      container: {
+        padding: {
+          DEFAULT: '1rem',
+          sm: '1rem',
+          md: '1.5rem',
+          lg: '2rem',
+          xl: '0rem',
+          '2xl': '0rem',
+        },
+      },
       keyframes: {
         fadeIn: {
           "0%": { opacity: "0" },
@@ -25,6 +26,7 @@ const config: Config = {
         },
         marquee: {
           "100%": {
+<<<<<<< HEAD
             transform: "translate(-100%, 0)",
           },
         },
@@ -34,13 +36,30 @@ const config: Config = {
           },
           "100%": {
             transform: "translate(-100%, 0)",
+=======
+            transform: "translate(-150%, 0)",
+>>>>>>> 995b2dde43692edbec5526db9a03d643f0ca9009
           },
+        },
+        scaleGrow: {
+          "0%": { transform: "translateX(-100%)", paddingLeft: "0" },
+          "100%": { transform: "translateX(0%)", paddingLeft: "10px" },
+        },
+        paddingLeft: {
+          "0%": { paddingLeft: "0" },
+          "100%": { paddingLeft: "10px" },
         },
       },
       animation: {
         fadeIn: "fadeIn 2s ease-in-out forwards",
+<<<<<<< HEAD
         marquee: "marquee 10s linear 8s infinite",
         fake: "fake 10s linear infinite",
+=======
+        marquee: "marquee 60s linear infinite",
+        scaleGrow: "scaleGrow 0.9s ease-in-out",
+        paddingLeft: "paddingLeft 0.9s ease-in-out",
+>>>>>>> 995b2dde43692edbec5526db9a03d643f0ca9009
       },
     },
   },
